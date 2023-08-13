@@ -20,17 +20,19 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
+import HomeIcon from "@mui/icons-material/Home";
 import MailIcon from "@mui/icons-material/Mail";
-import Analytics from "./components/Analytics/Analytics";
-
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
-
 import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
+
+import "./General.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar/Navbar";
 
 const drawerWidth = 240;
 
@@ -114,11 +116,17 @@ export default function App() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  const element = useRoutes(routes);
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      {/* <CssBaseline /> */}
+      <AppBar
+        position="fixed"
+        open={open}
+        // style={{ backgroundColor: "rgb(3, 195, 236)" }}
+        style={{ backgroundColor: "transparent" }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -132,9 +140,10 @@ export default function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          {/* <Typography variant="h6" noWrap component="div">
             Sneat
-          </Typography>
+          </Typography> */}
+          <Navbar />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -159,33 +168,39 @@ export default function App() {
             ></ListSubheader>
           }
         >
-          <ListItemButton>
-            <ListItemIcon>
-              <SendIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sent mail" />
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemIcon>
-              <DraftsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Drafts" />
-          </ListItemButton>
           <ListItemButton onClick={handleClick}>
             <ListItemIcon>
-              <InboxIcon />
+              <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Inbox" />
+            <ListItemText primary="Dashboards" />
             {openNest ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={openNest} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary="Starred" />
-              </ListItemButton>
+              <NavLink to="dashboards/analytics">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon fontSize="xs" />
+                  </ListItemIcon>
+                  <ListItemText primary="Analytics" />
+                </ListItemButton>
+              </NavLink>
+              <NavLink to="dashboards/crm">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon fontSize="xs" />
+                  </ListItemIcon>
+                  <ListItemText primary="CRM" />
+                </ListItemButton>
+              </NavLink>
+              <NavLink to="dashboards/ecommerce">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon fontSize="xs" />
+                  </ListItemIcon>
+                  <ListItemText primary="Ecommerce" />
+                </ListItemButton>
+              </NavLink>
             </List>
           </Collapse>
         </List>
@@ -239,39 +254,7 @@ export default function App() {
           ))}
         </List>
       </Drawer>
-      <Analytics></Analytics>
-      {/* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
-          dolor purus non enim praesent elementum facilisis leo vel. Risus at
-          ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum
-          quisque non tellus. Convallis convallis tellus id interdum velit
-          laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed
-          adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies
-          integer quis. Cursus euismod quis viverra nibh cras. Metus vulputate
-          eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo
-          quis imperdiet massa tincidunt. Cras tincidunt lobortis feugiat
-          vivamus at augue. At augue eget arcu dictum varius duis at consectetur
-          lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
-          faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </Box> */}
+      {element}
     </Box>
   );
 }

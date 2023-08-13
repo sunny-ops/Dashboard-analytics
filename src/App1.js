@@ -1,24 +1,55 @@
-import routes from "./route/routes";
-import { NavLink, useRoutes } from "react-router-dom";
+import React, { useState } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Button from "@mui/material/Button";
 
-function App() {
-  const element = useRoutes(routes);
+function App1() {
+  const [selectedColor, setSelectedColor] = useState("#2196F3"); // Default color
+
+  const handleChangeColor = (newColor) => {
+    setSelectedColor(newColor);
+  };
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: selectedColor,
+      },
+    },
+  });
+
   return (
-    <>
-      <h1>App1</h1>
-      {/* <div>
-        <NavLink to="dashboards/analytics"> Analytics</NavLink>
-      </div>
+    <ThemeProvider theme={theme}>
       <div>
-        <NavLink to="dashboards/crm"> CRM</NavLink>
+        <ColorSample
+          color="#2196F3"
+          onClick={() => handleChangeColor("#2196F3")}
+        />
+        <ColorSample
+          color="#E91E63"
+          onClick={() => handleChangeColor("#E91E63")}
+        />
+        {/* Add more color samples as needed */}
       </div>
-      <div>
-        <NavLink to="dashboards/ecommerce"> Ecommerce</NavLink>
-      </div>
-
-      {element} */}
-    </>
+      <Button variant="contained" color="primary">
+        Primary Button
+      </Button>
+    </ThemeProvider>
   );
 }
 
-export default App;
+function ColorSample({ color, onClick }) {
+  return (
+    <div
+      style={{
+        backgroundColor: color,
+        width: "50px",
+        height: "50px",
+        margin: "5px",
+        cursor: "pointer",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+export default App1;
