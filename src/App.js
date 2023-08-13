@@ -143,7 +143,6 @@ export default function App() {
           {/* <Typography variant="h6" noWrap component="div">
             Sneat
           </Typography> */}
-          <Navbar />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -254,7 +253,20 @@ export default function App() {
           ))}
         </List>
       </Drawer>
-      {element}
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, py: 3 }}
+        style={{
+          backgroundColor: "#F5F5F9",
+          height: "100vh",
+        }}
+      >
+        <div className="container" style={{ padding: "0" }}>
+          <Navbar />
+          {element}
+        </div>
+      </Box>
+      {/* {element} */}
     </Box>
   );
 }
