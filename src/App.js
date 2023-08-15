@@ -2,7 +2,12 @@ import routes from "./route/routes";
 import { NavLink, useRoutes } from "react-router-dom";
 
 import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import {
+  styled,
+  useTheme,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
@@ -31,6 +36,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
 import "./General.css";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 
@@ -101,10 +107,22 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
+const myTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#ff5722",
+    },
+    background: {
+      paper: "white",
+    },
+  },
+});
+
 export default function App() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [openNest, setOpenNest] = React.useState(false);
+
   const handleClick = () => {
     setOpenNest(!openNest);
   };
@@ -119,154 +137,167 @@ export default function App() {
   const element = useRoutes(routes);
 
   return (
-    <Box sx={{ display: "flex" }}>
-      {/* <CssBaseline /> */}
-      <AppBar
-        position="fixed"
-        open={open}
-        // style={{ backgroundColor: "rgb(3, 195, 236)" }}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: "none" }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Sneat
-          </Typography> */}
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-          subheader={
-            <ListSubheader
-              component="div"
-              id="nested-list-subheader"
-            ></ListSubheader>
-          }
+    <ThemeProvider theme={myTheme}>
+      <Box sx={{ display: "flex" }}>
+        {/* <CssBaseline /> */}
+        <AppBar
+          position="fixed"
+          open={open}
+          // style={{ backgroundColor: "rgb(3, 195, 236)" }}
+          style={{ backgroundColor: "transparent" }}
         >
-          <ListItemButton onClick={handleClick}>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboards" />
-            {openNest ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-          <Collapse in={openNest} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <NavLink to="dashboards/analytics">
-                <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon fontSize="xs" />
-                  </ListItemIcon>
-                  <ListItemText primary="Analytics" />
-                </ListItemButton>
-              </NavLink>
-              <NavLink to="dashboards/crm">
-                <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon fontSize="xs" />
-                  </ListItemIcon>
-                  <ListItemText primary="CRM" />
-                </ListItemButton>
-              </NavLink>
-              <NavLink to="dashboards/ecommerce">
-                <ListItemButton sx={{ pl: 4 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon fontSize="xs" />
-                  </ListItemIcon>
-                  <ListItemText primary="Ecommerce" />
-                </ListItemButton>
-              </NavLink>
-            </List>
-          </Collapse>
-        </List>
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{
+                marginRight: 5,
+                ...(open && { display: "none" }),
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Drawer variant="permanent" open={open}>
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "rtl" ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon />
+              )}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          <List
+            sx={{
+              width: "100%",
+              maxWidth: 360,
+              bgcolor: "background.paper",
+              px: 1,
+            }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader
+                component="div"
+                id="nested-list-subheader"
+              ></ListSubheader>
+            }
+          >
+            <ListItemButton className="round-border" onClick={handleClick}>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboards" />
+              {openNest ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+            <Collapse in={openNest} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding>
+                <NavLink to="dashboards/analytics">
+                  <ListItemButton
+                    // className="round-border"
+                    className={({ isActive }) => {
+                      return isActive ? "active nav-link" : "default nav-link";
+                    }}
+                    sx={{
+                      pl: 4,
+                    }}
+                  >
+                    <ListItemIcon>
+                      <FiberManualRecordIcon fontSize="xs" />
+                    </ListItemIcon>
+                    <ListItemText>Analytics</ListItemText>
+                  </ListItemButton>
+                </NavLink>
+
+                <NavLink to="dashboards/crm">
+                  <ListItemButton className="round-border" sx={{ pl: 4 }}>
+                    <ListItemIcon>
+                      <FiberManualRecordIcon fontSize="xs" />
+                    </ListItemIcon>
+                    <ListItemText primary="CRM" />
+                  </ListItemButton>
+                </NavLink>
+                <NavLink to="dashboards/ecommerce">
+                  <ListItemButton className="round-border" sx={{ pl: 4 }}>
+                    <ListItemIcon>
+                      <FiberManualRecordIcon fontSize="xs" />
+                    </ListItemIcon>
+                    <ListItemText primary="Ecommerce" />
+                  </ListItemButton>
+                </NavLink>
+              </List>
+            </Collapse>
+          </List>
+          <List>
+            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+              <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {["All mail", "Trash", "Spam"].map((text, index) => (
+              <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                <ListItemButton
                   sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, py: 3 }}
-        style={{
-          backgroundColor: "#F5F5F9",
-          height: "100vh",
-        }}
-      >
-        <div className="container" style={{ padding: "0" }}>
-          <Navbar />
-          {element}
-        </div>
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+        <Box
+          component="main"
+          sx={{ flexGrow: 1, py: 3 }}
+          style={{
+            backgroundColor: "#F5F5F9",
+            height: "100vh",
+          }}
+        >
+          <div className="container" style={{ padding: "0" }}>
+            <Navbar />
+            {element}
+          </div>
+        </Box>
+        {/* {element} */}
       </Box>
-      {/* {element} */}
-    </Box>
+    </ThemeProvider>
   );
 }

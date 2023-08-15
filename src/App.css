@@ -1,0 +1,25 @@
+/* ButtonStyles.css */
+.default {
+  background-color: white !important; /* 调整为您想要的颜色 */
+}
+
+.active {
+  background-color: #ff5733 !important; /* 调整为您想要的颜色 */
+}
+
+.custom-button {
+  padding-left: 16px; /* 设置左内边距，16px 对应 1 个 spacing unit */
+  background-color: #ff5733; /* 调整为您想要的颜色 */
+}
+
+.custom-button:hover {
+  background-color: #ff5733; /* 调整为您想要的颜色 */
+}
+
+.custom-button:active {
+  background-color: #ff5733; /* 调整为您想要的颜色 */
+}
+
+.round-border {
+  border-radius: 10px !important;
+}

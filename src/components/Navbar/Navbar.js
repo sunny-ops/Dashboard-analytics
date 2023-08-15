@@ -19,11 +19,11 @@ function Navbar(props) {
         <DarkModeOutlinedIcon fontSize="medium" />
         <GridViewOutlinedIcon fontSize="medium" />
         <NotificationsNoneOutlinedIcon fontSize="medium" />
-        <div class="MuiAvatar-root MuiAvatar-circular css-1o3owhp">
+        <div className="MuiAvatar-root MuiAvatar-circular css-1o3owhp">
           <img
             alt="John Doe"
             src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2011/07/outdoor-portraits-1.jpg?fit=5184%2C3456&ssl=1"
-            class="MuiAvatar-img css-1hy9t21"
+            className="MuiAvatar-img css-1hy9t21"
           />
         </div>
       </div>
