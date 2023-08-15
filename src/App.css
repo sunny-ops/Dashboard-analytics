@@ -1,25 +1,26 @@
-/* ButtonStyles.css */
+:root {
+  --my-color: var(--color); /* 定义一个CSS变量并将其值设置为color变量的值 */
+}
+
 .default {
-  background-color: white !important; /* 调整为您想要的颜色 */
+  color: rgba(50, 71, 92, 0.6);
+
+  background-color: white !important;
 }
 
 .active {
-  background-color: #ff5733 !important; /* 调整为您想要的颜色 */
-}
-
-.custom-button {
-  padding-left: 16px; /* 设置左内边距，16px 对应 1 个 spacing unit */
-  background-color: #ff5733; /* 调整为您想要的颜色 */
-}
-
-.custom-button:hover {
-  background-color: #ff5733; /* 调整为您想要的颜色 */
-}
-
-.custom-button:active {
-  background-color: #ff5733; /* 调整为您想要的颜色 */
+  background-color: rgba(3, 195, 236, 0.16) !important;
+  color: rgb(3, 195, 236) !important;
 }
 
 .round-border {
   border-radius: 10px !important;
 }
+
+/* span {
+  color: inherit;
+}
+
+.inherit {
+  color: inherit;
+} */

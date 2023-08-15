@@ -110,10 +110,11 @@ const Drawer = styled(MuiDrawer, {
 const myTheme = createTheme({
   palette: {
     primary: {
-      main: "#ff5722",
+      main: "rgb(3, 195, 236)", // 主题颜色
     },
     background: {
-      paper: "white",
+      paper: "#FFFFFF",
+      pen: "rgba(50, 71, 92, 0.6)",
     },
   },
 });
@@ -177,6 +178,7 @@ export default function App() {
               width: "100%",
               maxWidth: 360,
               bgcolor: "background.paper",
+              color: "background.pen",
               px: 1,
             }}
             component="nav"
@@ -190,50 +192,69 @@ export default function App() {
           >
             <ListItemButton className="round-border" onClick={handleClick}>
               <ListItemIcon>
-                <HomeIcon />
+                <HomeIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="Dashboards" />
               {openNest ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={openNest} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                <NavLink to="dashboards/analytics">
+                <NavLink
+                  to="dashboards/analytics"
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
+                  }}
+                >
                   <ListItemButton
-                    // className="round-border"
-                    className={({ isActive }) => {
-                      return isActive ? "active nav-link" : "default nav-link";
-                    }}
+                    className="round-border"
                     sx={{
                       pl: 4,
+                      color: "inherit!important",
                     }}
                   >
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText>Analytics</ListItemText>
+                    <ListItemText className="inherit" primary="Analytics" />
                   </ListItemButton>
                 </NavLink>
 
-                <NavLink to="dashboards/crm">
+                <NavLink
+                  to="dashboards/crm"
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
+                  }}
+                >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText primary="CRM" />
+                    <ListItemText className="inherit" primary="CRM" />
                   </ListItemButton>
                 </NavLink>
-                <NavLink to="dashboards/ecommerce">
+                <NavLink
+                  to="dashboards/ecommerce"
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
+                  }}
+                >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText primary="Ecommerce" />
+                    <ListItemText className="inherit" primary="Ecommerce" />
                   </ListItemButton>
                 </NavLink>
               </List>
             </Collapse>
           </List>
-          <List>
+          <List sx={{ color: "background.pen" }}>
             {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
               <ListItem key={text} disablePadding sx={{ display: "block" }}>
                 <ListItemButton
@@ -258,7 +279,7 @@ export default function App() {
             ))}
           </List>
           <Divider />
-          <List>
+          <List sx={{ color: "background.pen" }}>
             {["All mail", "Trash", "Spam"].map((text, index) => (
               <ListItem key={text} disablePadding sx={{ display: "block" }}>
                 <ListItemButton
