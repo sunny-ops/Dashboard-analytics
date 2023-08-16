@@ -192,7 +192,7 @@ export default function App() {
           >
             <ListItemButton className="round-border" onClick={handleClick}>
               <ListItemIcon>
-                <HomeIcon color="primary" />
+                <HomeIcon />
               </ListItemIcon>
               <ListItemText primary="Dashboards" />
               {openNest ? <ExpandLess /> : <ExpandMore />}
@@ -211,13 +211,12 @@ export default function App() {
                     className="round-border"
                     sx={{
                       pl: 4,
-                      color: "inherit!important",
                     }}
                   >
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText className="inherit" primary="Analytics" />
+                    <ListItemText primary="Analytics" />
                   </ListItemButton>
                 </NavLink>
 
@@ -233,7 +232,7 @@ export default function App() {
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText className="inherit" primary="CRM" />
+                    <ListItemText primary="CRM" />
                   </ListItemButton>
                 </NavLink>
                 <NavLink
@@ -248,7 +247,7 @@ export default function App() {
                     <ListItemIcon>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
-                    <ListItemText className="inherit" primary="Ecommerce" />
+                    <ListItemText primary="Ecommerce" />
                   </ListItemButton>
                 </NavLink>
               </List>

@@ -1,10 +1,5 @@
-:root {
-  --my-color: var(--color); /* 定义一个CSS变量并将其值设置为color变量的值 */
-}
-
 .default {
   color: rgba(50, 71, 92, 0.6);
-
   background-color: white !important;
 }
 
