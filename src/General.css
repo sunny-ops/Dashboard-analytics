@@ -11,3 +11,19 @@ a {
   text-decoration: none !important;
   color: inherit;
 }
+
+.font-lg {
+  font-size: 1.4993rem;
+}
+
+.font-md {
+  font-size: 1.2rem;
+}
+
+.font-sm {
+  font-size: 1rem;
+}
+
+.color-green {
+  color: rgb(113, 221, 55);
+}

@@ -26,16 +26,16 @@ function Analytics(props) {
     <>
       <Box sx={{ flexGrow: 1 }} className="mt-5 default-color">
         <Grid container spacing={2}>
-          <Grid item xs={8}>
+          <Grid item className="col-lg-8 col-md-12">
             <Item
               sx={{ color: "inherit" }}
               className="d-flex flex-direction-row justify-content-between box-padding g-5"
             >
               <div>
-                <h4 style={{ color: themeColor }} className="mt-2">
+                <h4 style={{ color: themeColor }} className="mt-2 font-lg">
                   Congratulations John!
                 </h4>
-                <p>
+                <p className="font-sm">
                   You have done 72% more sales today. <br></br>Check your new
                   badge in your profile.
                 </p>
@@ -43,7 +43,7 @@ function Analytics(props) {
                 <Button
                   variant="outlined"
                   sx={{ color: themeColor, borderColor: themeColor }}
-                  className="mt-3"
+                  className="mt-3 font-sm"
                 >
                   View Badges
                 </Button>
@@ -57,21 +57,24 @@ function Analytics(props) {
               </div>
             </Item>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item className="col-lg-2 col-md-6">
             <Item>xs=2</Item>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item className="col-lg-2 col-md-6">
             <Item className="box-padding default-color">
-              <div style={{ height: "160px" }}>
+              <div style={{ height: "140px" }}>
                 <div className="d-flex flex-direction-row mb-3">
                   <img></img>
                   <MoreVertOutlinedIcon />
                 </div>
-                <h5 className="mb-2">Sales</h5>
-                <h5 className="default-dark mb-2">$4,679</h5>
-                <div className="d-flex flex-direction-row">
-                  <ArrowUpwardOutlinedIcon />
-                  <p>28.14%</p>
+                <p className="mb-2 font-md">Sales</p>
+                <h5 className="default-dark mb-2 font-lg">$4,679</h5>
+                <div className="d-flex flex-direction-row align-items-center">
+                  <ArrowUpwardOutlinedIcon
+                    fontSize="xs"
+                    className="me-2 color-green"
+                  />
+                  <p className="color-green">28.14%</p>
                 </div>
               </div>
             </Item>
