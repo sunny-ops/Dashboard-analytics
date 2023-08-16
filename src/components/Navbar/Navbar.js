@@ -4,16 +4,19 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import { useTheme } from "@mui/material/styles";
 import "./Navbar.css";
 
 function Navbar(props) {
+  const theme = useTheme();
+
+  // 现在你可以使用 theme 变量来获取主题的值
+  // console.log("main", theme.palette.primary.main);
   return (
-    <div className="d-flex justify-content-between align-items-center navbarDiv">
-      <div className="d-flex align-items-center gap-3">
+    <div className="d-flex justify-content-between align-items-center navbarDiv default">
+      <div className="d-flex align-items-center gap-3 px-3">
         <SearchOutlinedIcon fontSize="medium" />
-        <div style={{ color: "rgba(50, 71, 92, 0.38)", fontSize: "1.2rem" }}>
-          Search (Ctrl+/)
-        </div>
+        <div style={{ fontSize: "1.2rem" }}>Search (Ctrl+/)</div>
       </div>
       <div className="d-flex justify-content-end gap-3 align-items-center px-3">
         <DarkModeOutlinedIcon fontSize="medium" />

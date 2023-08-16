@@ -111,7 +111,6 @@ const myTheme = createTheme({
   palette: {
     primary: {
       main: "rgb(3, 195, 236)", // 主题颜色
-      // main: "rgb(255, 0, 0)",
     },
     background: {
       paper: "#FFFFFF",
