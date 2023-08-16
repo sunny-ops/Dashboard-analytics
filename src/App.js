@@ -110,7 +110,8 @@ const Drawer = styled(MuiDrawer, {
 const myTheme = createTheme({
   palette: {
     primary: {
-      main: "rgb(3, 195, 236)", // 主题颜色
+      // main: "rgb(3, 195, 236)", // 主题颜色
+      main: "rgb(255, 0, 0)",
     },
     background: {
       paper: "#FFFFFF",
@@ -213,7 +214,7 @@ export default function App() {
                       pl: 4,
                     }}
                   >
-                    <ListItemIcon>
+                    <ListItemIcon style={{ color: "inherit" }}>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
                     <ListItemText primary="Analytics" />
@@ -229,7 +230,7 @@ export default function App() {
                   }}
                 >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                    <ListItemIcon>
+                    <ListItemIcon style={{ color: "inherit" }}>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
                     <ListItemText primary="CRM" />
@@ -244,7 +245,7 @@ export default function App() {
                   }}
                 >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                    <ListItemIcon>
+                    <ListItemIcon style={{ color: "inherit" }}>
                       <FiberManualRecordIcon fontSize="xs" />
                     </ListItemIcon>
                     <ListItemText primary="Ecommerce" />
