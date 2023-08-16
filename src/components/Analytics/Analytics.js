@@ -8,6 +8,7 @@ import { useTheme } from "@mui/material/styles";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import "./Analytics.css";
+import Payment from "./Payment";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -24,12 +25,12 @@ function Analytics(props) {
   console.log("main", theme.palette.primary.main);
   return (
     <>
-      <Box sx={{ flexGrow: 1 }} className="mt-5 default-color">
+      <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
         <Grid container spacing={2}>
           <Grid item className="col-lg-8 col-md-12">
             <Item
               sx={{ color: "inherit" }}
-              className="d-flex flex-direction-row justify-content-between box-padding g-5"
+              className="d-flex flex-direction-row justify-content-between box-padding g-5 round-border"
             >
               <div>
                 <h4 style={{ color: themeColor }} className="mt-2 font-lg">
@@ -43,7 +44,7 @@ function Analytics(props) {
                 <Button
                   variant="outlined"
                   sx={{ color: themeColor, borderColor: themeColor }}
-                  className="mt-3 font-sm"
+                  className="font-sm"
                 >
                   View Badges
                 </Button>
@@ -57,26 +58,17 @@ function Analytics(props) {
               </div>
             </Item>
           </Grid>
-          <Grid item className="col-lg-2 col-md-6">
-            <Item>xs=2</Item>
+          <Grid item className="col-lg-2 col-6">
+            <Item className="round-border" sx={{ color: "inherit" }}>
+              xs=2
+            </Item>
           </Grid>
-          <Grid item className="col-lg-2 col-md-6">
-            <Item className="box-padding default-color">
-              <div style={{ height: "140px" }}>
-                <div className="d-flex flex-direction-row mb-3">
-                  <img></img>
-                  <MoreVertOutlinedIcon />
-                </div>
-                <p className="mb-2 font-md">Sales</p>
-                <h5 className="default-dark mb-2 font-lg">$4,679</h5>
-                <div className="d-flex flex-direction-row align-items-center">
-                  <ArrowUpwardOutlinedIcon
-                    fontSize="xs"
-                    className="me-2 color-green"
-                  />
-                  <p className="color-green">28.14%</p>
-                </div>
-              </div>
+          <Grid item className="col-lg-2 col-6">
+            <Item
+              className="box-padding default-color round-border "
+              sx={{ color: "inherit" }}
+            >
+              <Payment value="Sales" isUp={true} />
             </Item>
           </Grid>
         </Grid>
