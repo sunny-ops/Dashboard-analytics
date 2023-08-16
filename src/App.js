@@ -1,5 +1,5 @@
 import routes from "./route/routes";
-import { NavLink, useRoutes } from "react-router-dom";
+import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
 import * as React from "react";
 import {
@@ -110,8 +110,8 @@ const Drawer = styled(MuiDrawer, {
 const myTheme = createTheme({
   palette: {
     primary: {
-      // main: "rgb(3, 195, 236)", // 主题颜色
-      main: "rgb(255, 0, 0)",
+      main: "rgb(3, 195, 236)", // 主题颜色
+      // main: "rgb(255, 0, 0)",
     },
     background: {
       paper: "#FFFFFF",
@@ -207,6 +207,7 @@ export default function App() {
                       ? "active round-border nav-link"
                       : "default round-border nav-link";
                   }}
+                  style={{ "--color": myTheme.palette.primary.main }}
                 >
                   <ListItemButton
                     className="round-border"
@@ -228,6 +229,7 @@ export default function App() {
                       ? "active round-border nav-link"
                       : "default round-border nav-link";
                   }}
+                  style={{ "--color": myTheme.palette.primary.main }}
                 >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
                     <ListItemIcon style={{ color: "inherit" }}>
@@ -243,6 +245,7 @@ export default function App() {
                       ? "active round-border nav-link"
                       : "default round-border nav-link";
                   }}
+                  style={{ "--color": myTheme.palette.primary.main }}
                 >
                   <ListItemButton className="round-border" sx={{ pl: 4 }}>
                     <ListItemIcon style={{ color: "inherit" }}>
