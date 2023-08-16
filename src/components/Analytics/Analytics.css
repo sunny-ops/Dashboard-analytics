@@ -1,6 +1,13 @@
 .default-color {
   color: rgba(50, 71, 92, 0.6);
 }
+.default-dark {
+  color: rgba(50, 71, 92, 0.87);
+}
+
 .congrat-img {
-  width: 100px !important;
+  width: 200px !important;
+}
+.box-padding {
+  padding: 20px !important;
 }
