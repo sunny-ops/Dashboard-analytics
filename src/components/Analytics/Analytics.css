@@ -12,3 +12,29 @@
 .box-padding {
   padding: 20px !important;
 }
+
+.smallIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.dropdown-toggle {
+  background-color: white !important;
+  background-image: url("../../images/cards/icons-more.png");
+  background-size: cover;
+  background-position: center;
+  border: 0 !important;
+}
+
+.dropdown-toggle::after {
+  color: transparent;
+}
+
+.dropdown-menu.show {
+  min-width: 50px;
+  left: -35px;
+  border: 0;
+  box-shadow: rgba(50, 71, 92, 0.2) 0px 5px 5px -3px,
+    rgba(50, 71, 92, 0.14) 0px 8px 10px 1px,
+    rgba(50, 71, 92, 0.12) 0px 3px 14px 2px;
+}

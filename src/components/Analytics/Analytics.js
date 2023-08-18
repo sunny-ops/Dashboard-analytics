@@ -24,7 +24,6 @@ function Analytics(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
 
-  console.log("main", theme.palette.primary.main);
   return (
     <>
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
@@ -54,8 +53,8 @@ function Analytics(props) {
               <div>
                 <img
                   alt="Congratulations John"
-                  src="https://static.vecteezy.com/system/resources/previews/021/449/803/non_2x/cute-girl-with-computer-working-on-laptop-cartoon-icon-illustration-people-technology-icon-concept-art-vector.jpg"
-                  class="congrat-img"
+                  src={require("../../images/cards/illustration-john-light.png")}
+                  className="congrat-img me-5"
                 />
               </div>
             </Item>
@@ -70,7 +69,11 @@ function Analytics(props) {
               className="box-padding default-color round-border "
               sx={{ color: "inherit" }}
             >
-              <Payment value="Sales" isUp={true} />
+              <Payment
+                value="Sales"
+                isUp={true}
+                imgName="stats-vertical-wallet.png"
+              />
             </Item>
           </Grid>
         </Grid>

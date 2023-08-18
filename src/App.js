@@ -145,7 +145,7 @@ export default function App() {
           position="fixed"
           open={open}
           // style={{ backgroundColor: "rgb(3, 195, 236)" }}
-          style={{ backgroundColor: "transparent" }}
+          style={{ backgroundColor: "transparent", boxShadow: "none" }}
         >
           <Toolbar>
             <IconButton

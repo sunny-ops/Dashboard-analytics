@@ -8,7 +8,6 @@ function RevenueBar(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
 
-  console.log("main", theme.palette.primary.main);
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July"],
     datasets: [
