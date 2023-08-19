@@ -11,6 +11,9 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Analytics.css";
 import Payment from "./Payment";
 import RevenueBar from "./RevenueBar";
+import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
+import { Key } from "@mui/icons-material";
+import shadows from "@mui/material/styles/shadows";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -569,7 +572,7 @@ function Analytics(props) {
       </Box>
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
         <Grid container spacing={2}>
-          <Grid item className="col-lg-8 col-md-12">
+          <Grid item className="col-lg-8 col-12">
             <Item
               sx={{ color: "inherit" }}
               className="d-flex flex-direction-row justify-content-between box-padding g-5 round-border"
@@ -602,8 +605,80 @@ function Analytics(props) {
             </Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
-            <Item className="round-border" sx={{ color: "inherit" }}>
-              xs=2
+            <Item
+              className="round-border"
+              sx={{
+                color: "inherit",
+                boxShadow: "none",
+                backgroundColor: "rgb(245, 245, 249)",
+                padding: "0",
+              }}
+            >
+              <Box sx={{ width: "100%" }}>
+                <Grid
+                  container
+                  rowSpacing={1}
+                  columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                >
+                  <Grid item xs={6}>
+                    <Item className="round-border" sx={{ color: "inherit" }}>
+                      <div className="default font-md ms-2">Revenue</div>
+                      <div className="default-dark font-lg ms-2">425K</div>
+                      <div className="order revenue"></div>
+                    </Item>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Item
+                      className="box-padding default-color round-border "
+                      sx={{ color: "inherit" }}
+                    >
+                      <Payment
+                        value="Payments"
+                        isUp={false}
+                        imgName="stats-vertical-paypal.png"
+                      />
+                    </Item>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Item
+                      className="round-border"
+                      style={{ marginTop: "12px" }}
+                    >
+                      <div className="d-flex flex-direction-row box-padding justify-content-between align-items-center">
+                        <div>
+                          <div className="default-dark font-md mb-3">
+                            Profit Report
+                          </div>
+                          <Button
+                            variant="contained"
+                            // color="success"
+                            className="mb-3"
+                            sx={{
+                              backgroundColor: "rgba(255, 171, 0, 0.16)",
+                              color: "rgb(255, 171, 0)",
+                              boxShadow: "none",
+                            }}
+                          >
+                            Year 2023
+                          </Button>
+                          <div className="d-flex flex-direction-row align-items-center mb-2">
+                            <ArrowUpwardOutlinedIcon
+                              fontSize="xs"
+                              className="me-2 color-green"
+                            />
+                            <div className="color-green">28.14%</div>
+                          </div>
+                          <div className="default-dark font-lg">$84,686k</div>
+                        </div>
+                        <div
+                          className="order profit"
+                          style={{ width: "250px" }}
+                        ></div>
+                      </div>
+                    </Item>
+                  </Grid>
+                </Grid>
+              </Box>
             </Item>
           </Grid>
         </Grid>

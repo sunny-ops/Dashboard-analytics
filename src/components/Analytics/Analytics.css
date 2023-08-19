@@ -50,9 +50,14 @@
 .order {
   background-color: white !important;
   background-image: url(../../images/svgs/order.svg);
-  background-size: 115%;
-  background-position: -15px -8px;
-  /* border: 0 !important; */
+  background-size: cover;
   height: 105px;
   background-repeat: no-repeat;
+}
+.revenue {
+  background-image: url(../../images/svgs/revenue.svg);
+}
+
+.profit {
+  background-image: url(../../images/svgs/profit.svg);
 }
