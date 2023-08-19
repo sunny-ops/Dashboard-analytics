@@ -18,7 +18,15 @@
   height: 42px;
 }
 
-.dropdown-toggle {
+/* .dropdown-toggle {
+  background-color: white !important;
+  background-image: url("../../images/cards/icons-more.png");
+  background-size: cover;
+  background-position: center;
+  border: 0 !important;
+} */
+
+.payment-dropdown .dropdown-toggle {
   background-color: white !important;
   background-image: url("../../images/cards/icons-more.png");
   background-size: cover;
@@ -26,7 +34,7 @@
   border: 0 !important;
 }
 
-.dropdown-toggle::after {
+.payment-dropdown .dropdown-toggle::after {
   color: transparent;
 }
 
@@ -60,4 +68,9 @@
 
 .profit {
   background-image: url(../../images/svgs/profit.svg);
+}
+
+.growth {
+  background-image: url(../../images/svgs/growth.svg);
+  height: 155px;
 }

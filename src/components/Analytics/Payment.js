@@ -15,7 +15,7 @@ function Payment(props) {
           src={require(`../../images/cards/${props.imgName}`)}
           className="smallIcon"
         ></img>
-        <DropdownButton title="">
+        <DropdownButton title="" className="payment-dropdown">
           <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
             Refresh
           </Dropdown.Item>
