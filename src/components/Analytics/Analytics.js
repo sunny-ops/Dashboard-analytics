@@ -247,6 +247,19 @@ function Analytics(props) {
           </Grid>
         </Grid>
       </Box>
+      <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
+        <Grid container spacing={2}>
+          <Grid item className="col-lg-4 col-12">
+            <Item>xs=4</Item>
+          </Grid>
+          <Grid item className="col-lg-4 col-12">
+            <Item>xs=4</Item>
+          </Grid>
+          <Grid item className="col-lg-4 col-12">
+            <Item>xs=4</Item>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 }
