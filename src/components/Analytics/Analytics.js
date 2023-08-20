@@ -87,7 +87,11 @@ function Analytics(props) {
         <Grid container spacing={2}>
           <Grid item className="col-lg-8 col-12">
             <Item
-              sx={{ color: "inherit", height: "429px" }}
+              sx={{
+                color: "inherit",
+                height: "429px",
+                paddingTop: "30px!important",
+              }}
               className="d-flex flex-direction-row justify-content-between box-padding g-5 round-border"
             >
               <div style={{ width: "65%" }}>
@@ -116,7 +120,7 @@ function Analytics(props) {
               </div>
               <div className="flex-grow-1 m-3">
                 <div className="d-flex flex-column align-items-center">
-                  <Dropdown className="mb-3">
+                  <Dropdown className="mb-3 mt-3">
                     <Dropdown.Toggle
                       id="dropdown-basic"
                       style={{ color: themeColor, borderColor: themeColor }}
@@ -256,7 +260,50 @@ function Analytics(props) {
             <Item>xs=4</Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
-            <Item>xs=4</Item>
+            <Item className="box-padding">
+              <div className="d-flex flex-row justify-content-between">
+                <div className="default-dark font-md">Transition</div>
+                <DropdownButton title="" className="payment-dropdown">
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Refresh
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Share
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Update
+                  </Dropdown.Item>
+                </DropdownButton>
+              </div>
+              <div>
+                <div className="d-flex flex-row align-items-center justify-content-between">
+                  <div className="d-flex flex-row gap-3 align-items-center">
+                    <img
+                      alt="Paypal"
+                      src={require(`../../images/cards/stats-vertical-paypal.png`)}
+                      className="smallIcon"
+                    ></img>
+                    <div className="d-flex flex-column">
+                      <div className="font-sm default">Paypal</div>
+                      <div className="font-sm default-dark">Send Money</div>
+                    </div>
+                  </div>
+                  <div className="d-flex flex-row gap-3 align-items-center">
+                    <div className="font-sm default-dark shrink-flex-1">82</div>
+                    <div className="font-sm default">USD</div>
+                  </div>
+                </div>
+              </div>
+            </Item>
           </Grid>
         </Grid>
       </Box>
