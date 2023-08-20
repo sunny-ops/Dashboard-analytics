@@ -15,7 +15,7 @@ import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutl
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -28,12 +28,14 @@ const Item = styled(Paper)(({ theme }) => ({
 function Analytics(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
+  const [transitions, setTransitions] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8080/api/analytics/transitions")
       .then((res) => {
-        console.log(res.data);
+        setTransitions(res.data);
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -274,7 +276,7 @@ function Analytics(props) {
           </Grid>
           <Grid item className="col-lg-4 col-12">
             <Item className="box-padding">
-              <div className="d-flex flex-row justify-content-between">
+              <div className="d-flex flex-row justify-content-between mb-3">
                 <div className="default-dark font-lg">Transition</div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
@@ -297,25 +299,34 @@ function Analytics(props) {
                   </Dropdown.Item>
                 </DropdownButton>
               </div>
-              <div>
-                <div className="d-flex flex-row align-items-center justify-content-between">
-                  <div className="d-flex flex-row gap-3 align-items-center">
-                    <img
-                      alt="Paypal"
-                      src={require(`../../images/cards/stats-vertical-paypal.png`)}
-                      className="smallIcon"
-                    ></img>
-                    <div className="d-flex flex-column">
-                      <div className="font-sm default">Paypal</div>
-                      <div className="font-sm default-dark">Send Money</div>
-                    </div>
-                  </div>
-                  <div className="d-flex flex-row gap-3 align-items-center">
-                    <div className="font-sm default-dark shrink-flex-1">82</div>
-                    <div className="font-sm default">USD</div>
-                  </div>
-                </div>
-              </div>
+              <ul style={{ paddingLeft: "0" }}>
+                {transitions.map((v, id) => {
+                  return (
+                    <li
+                      key={v._id}
+                      className="d-flex flex-row align-items-center justify-content-between mb-3"
+                    >
+                      <div className="d-flex flex-row gap-3 align-items-center">
+                        <img
+                          alt="Paypal"
+                          src={require(`../../images/cards/${v.img}`)}
+                          className="smallIcon"
+                        ></img>
+                        <div className="d-flex flex-column">
+                          <div className="font-sm default">{v.name}</div>
+                          <div className="font-sm default-dark">{v.usage}</div>
+                        </div>
+                      </div>
+                      <div className="d-flex flex-row gap-3 align-items-center">
+                        <div className="font-sm default-dark shrink-flex-1">
+                          {v.amount}
+                        </div>
+                        <div className="font-sm default">{v.unit}</div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </Item>
           </Grid>
         </Grid>

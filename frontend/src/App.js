@@ -312,7 +312,7 @@ export default function App() {
           sx={{ flexGrow: 1, py: 3 }}
           style={{
             backgroundColor: "#F5F5F9",
-            height: "100vh",
+            // height: "100vh",
           }}
         >
           <div className="container" style={{ padding: "0" }}>
