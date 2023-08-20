@@ -6,7 +6,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import "../../App.css";
 
 function Payment(props) {
-  console.log(props.imgName);
+  // console.log(props.imgName);
   return (
     <div style={{ height: "145.289px" }}>
       <div className="d-flex flex-direction-row mb-3 justify-content-between">

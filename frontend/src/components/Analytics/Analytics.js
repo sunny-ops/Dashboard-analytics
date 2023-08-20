@@ -262,7 +262,7 @@ function Analytics(props) {
           <Grid item className="col-lg-4 col-12">
             <Item className="box-padding">
               <div className="d-flex flex-row justify-content-between">
-                <div className="default-dark font-md">Transition</div>
+                <div className="default-dark font-lg">Transition</div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
