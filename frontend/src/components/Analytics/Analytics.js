@@ -27,6 +27,18 @@ function Analytics(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
 
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8080/origin")
+      .then((res) => {
+        console.log(res.data.novals);
+        setList(res.data.novals);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
