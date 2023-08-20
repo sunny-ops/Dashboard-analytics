@@ -14,6 +14,8 @@ import RevenueBar from "./RevenueBar";
 import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import axios from "axios";
+import { useEffect } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -29,10 +31,9 @@ function Analytics(props) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/origin")
+      .get("http://127.0.0.1:8080/api/analytics/transitions")
       .then((res) => {
-        console.log(res.data.novals);
-        setList(res.data.novals);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
