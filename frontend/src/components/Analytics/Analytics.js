@@ -29,12 +29,25 @@ function Analytics(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
   const [transitions, setTransitions] = useState([]);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8080/api/analytics/transitions")
       .then((res) => {
         setTransitions(res.data);
+        // console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8080/api/analytics/orders")
+      .then((res) => {
+        setOrders(res.data);
         // console.log(res.data);
       })
       .catch((err) => {
@@ -269,7 +282,70 @@ function Analytics(props) {
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
         <Grid container spacing={2}>
           <Grid item className="col-lg-4 col-12">
-            <Item>xs=4</Item>
+            <Item className="box-padding">
+              <div>
+                <div className="d-flex flex-row justify-content-between">
+                  <div className="default-dark font-lg">Order Statistics</div>
+                  <DropdownButton title="" className="payment-dropdown">
+                    <Dropdown.Item
+                      style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                      href="#"
+                    >
+                      Refresh
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                      href="#"
+                    >
+                      Share
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                      href="#"
+                    >
+                      Update
+                    </Dropdown.Item>
+                  </DropdownButton>
+                </div>
+                <div className="default font-sm mb-4">42.82k Total Sales</div>
+                <div className="d-flex flex-row">
+                  <div>
+                    <div className="default-dark font-lg">8,258</div>
+                    <div className="default font-sm mb-4">Total Orders</div>
+                  </div>
+                </div>
+                <ul style={{ paddingLeft: "0" }}>
+                  {orders.map((v, id) => {
+                    return (
+                      <li
+                        key={v._id}
+                        className="d-flex flex-row align-items-center justify-content-between mb-3"
+                      >
+                        <div className="d-flex flex-row gap-3 align-items-center">
+                          <img
+                            alt="Paypal"
+                            src={require(`../../images/cards/${v.img}`)}
+                            className="smallIcon"
+                          ></img>
+                          <div className="d-flex flex-column">
+                            <div className="font-sm default">{v.name}</div>
+                            <div className="font-sm default-dark">
+                              {v.usage}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row gap-3 align-items-center">
+                          <div className="font-sm default-dark shrink-flex-1">
+                            {v.amount}
+                          </div>
+                          <div className="font-sm default">{v.unit}</div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
             <Item>xs=4</Item>
