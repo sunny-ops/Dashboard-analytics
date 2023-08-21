@@ -27,6 +27,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import HomeIcon from "@mui/icons-material/Home";
 import MailIcon from "@mui/icons-material/Mail";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
@@ -125,6 +126,21 @@ export default function App() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [openNest, setOpenNest] = React.useState(false);
+
+  const iconMap = {
+    Email: MailIcon,
+    Chat: ChatBubbleOutlineOutlinedIcon,
+  };
+
+  function renderIcon(iconName) {
+    const IconComponent = iconMap[iconName];
+    if (IconComponent) {
+      return <IconComponent />;
+    } else {
+      console.warn(`Icon named "${iconName}" not found in iconMap`);
+      return null;
+    }
+  }
 
   const handleClick = () => {
     setOpenNest(!openNest);
@@ -259,26 +275,39 @@ export default function App() {
             </Collapse>
           </List>
           <List sx={{ color: "background.pen" }}>
-            {["Email", "Drafts"].map((text, index) => (
-              <ListItem key={text} disablePadding sx={{ display: "block" }}>
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
+            {["Email", "Chat"].map((text, index) => (
+              <ListItem disablePadding sx={{ display: "block" }}>
+                <NavLink
+                  to={text}
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
                   }}
+                  style={{ "--color": myTheme.palette.primary.main }}
                 >
-                  <ListItemIcon
+                  <ListItemButton
                     sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5,
                     }}
                   >
-                    <MailIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {renderIcon(text)}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={text}
+                      sx={{ opacity: open ? 1 : 0 }}
+                    />
+                  </ListItemButton>
+                </NavLink>
               </ListItem>
             ))}
           </List>
