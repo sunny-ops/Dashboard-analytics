@@ -13,13 +13,13 @@ import Payment from "./Payment";
 import RevenueBar from "./RevenueBar";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
-import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
 import Timeline from "@mui/lab/Timeline";
-import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineItem, { timelineItemClasses } from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -302,7 +302,7 @@ function Analytics(props) {
             <Item className="box-padding">
               <div>
                 <div className="d-flex flex-row justify-content-between">
-                  <div className="default-dark font-md">Order Statistics</div>
+                  <div className="default-dark font-lg">Order Statistics</div>
                   <DropdownButton title="" className="payment-dropdown">
                     <Dropdown.Item
                       style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -417,7 +417,7 @@ function Analytics(props) {
           <Grid item className="col-lg-4 col-12">
             <Item className="box-padding" style={{ height: "464px" }}>
               <div className="d-flex flex-row justify-content-between mb-3">
-                <div className="default-dark font-md">Transition</div>
+                <div className="default-dark font-lg">Transition</div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -476,7 +476,7 @@ function Analytics(props) {
           <Grid item xs={6} className="col-lg-6 col-12">
             <Item className="box-padding">
               <div className="d-flex flex-row justify-content-between mb-3">
-                <div className="default-dark font-md">Activity Timeline</div>
+                <div className="default-dark font-lg">Activity Timeline</div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -498,52 +498,103 @@ function Analytics(props) {
                   </Dropdown.Item>
                 </DropdownButton>
               </div>
-              <Timeline>
+              <Timeline
+                sx={{
+                  [`& .${timelineItemClasses.root}:before`]: {
+                    flex: 0,
+                    padding: 0,
+                  },
+                }}
+              >
                 <TimelineItem>
                   <TimelineSeparator>
-                    <TimelineDot />
+                    <TimelineDot sx={{ backgroundColor: themeColor }} />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Eat</TimelineContent>
+                  <TimelineContent>
+                    <div className="d-flex flex-row justify-content-between">
+                      <div className="d-flex flex-row gap-3">
+                        <div className="d-flex flex-column">
+                          <div className="font-sm default-dark">
+                            12 Invoices have been paid
+                          </div>
+                          <div className="font-xs default">
+                            Invoices have been paid to the company
+                          </div>
+                          <div className="d-flex flex-row align-items-center">
+                            <img
+                              src={require(`../../images/icons/file-icons/pdf.png`)}
+                              className="xsIcon"
+                            ></img>
+                            <div className="font-sm default-dark ms-3">
+                              Invoices.pdf
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="default font-sm">12 min ago</div>
+                    </div>
+                  </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineSeparator>
-                    <TimelineDot />
+                    <TimelineDot sx={{ backgroundColor: themeColor }} />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Code</TimelineContent>
+                  <TimelineContent>
+                    <div className="d-flex flex-row justify-content-between">
+                      <div className="d-flex flex-row gap-3">
+                        <div className="d-flex flex-column">
+                          <div className="font-sm default-dark">
+                            Client Meeting
+                          </div>
+                          <div className="font-xs default">
+                            Project meeting with john @10:15am
+                          </div>
+                          <div className="d-flex flex-row align-items-center">
+                            <img
+                              src={require(`../../images/avatars/3.png`)}
+                              className="smallIcon border-circle"
+                            ></img>
+                            <div className="font-sm default-dark ms-3">
+                              Steven Nash (Client)
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="default font-sm">12 min ago</div>
+                    </div>
+                  </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineSeparator>
-                    <TimelineDot />
+                    <TimelineDot sx={{ backgroundColor: themeColor }} />
                   </TimelineSeparator>
-                  <TimelineContent>Sleep</TimelineContent>
+                  <TimelineContent>
+                    <div className="d-flex flex-row justify-content-between">
+                      <div className="d-flex flex-row gap-3">
+                        <div className="d-flex flex-column">
+                          <div className="font-sm default-dark">
+                            Create a new project for client
+                          </div>
+                          <div className="font-xs default"></div>
+                          <div className="d-flex flex-row align-items-center">
+                            <img
+                              src={require(`../../images/avatars/5.png`)}
+                              className="smallIcon border-circle"
+                            ></img>
+                            <img
+                              src={require(`../../images/avatars/12.png`)}
+                              className="smallIcon border-circle"
+                            ></img>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="default font-sm">12 min ago</div>
+                    </div>
+                  </TimelineContent>
                 </TimelineItem>
               </Timeline>
-              {/* <div className="d-flex flex-row justify-content-between">
-                <div className="d-flex flex-row gap-3">
-                  <AdjustOutlinedIcon sx={{ color: themeColor }} />
-                  <div className="d-flex flex-column">
-                    <div className="font-sm default-dark">
-                      12 Invoices have been paid
-                    </div>
-                    <div className="font-xs default">
-                      Invoices have been paid to the company
-                    </div>
-                    <div className="d-flex flex-row align-items-center">
-                      <img
-                        src={require(`../../images/icons/file-icons/pdf.png`)}
-                        className="xsIcon"
-                      ></img>
-                      <div className="font-sm default-dark ms-3">
-                        Invoices.pdf
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="default font-sm">12 min ago</div>
-              </div> */}
             </Item>
           </Grid>
           <Grid item xs={6} className="col-lg-6 col-12">

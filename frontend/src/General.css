@@ -34,3 +34,7 @@ a {
 .color-red {
   color: rgb(255, 62, 29);
 }
+
+.border-circle {
+  border-radius: 50px;
+}
