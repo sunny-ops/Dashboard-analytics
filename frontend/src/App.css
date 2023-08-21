@@ -8,6 +8,10 @@
   color: var(--color) !important;
 }
 
+.default-color {
+  color: rgba(50, 71, 92, 0.6);
+}
+
 .round-border {
   border-radius: 10px !important;
 }

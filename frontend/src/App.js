@@ -39,6 +39,7 @@ import "./General.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./Footer";
 
 const drawerWidth = 240;
 
@@ -318,6 +319,7 @@ export default function App() {
           <div className="container" style={{ padding: "0" }}>
             <Navbar />
             {element}
+            <Footer />
           </div>
         </Box>
         {/* {element} */}
