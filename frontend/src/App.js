@@ -259,7 +259,7 @@ export default function App() {
             </Collapse>
           </List>
           <List sx={{ color: "background.pen" }}>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            {["Email", "Drafts"].map((text, index) => (
               <ListItem key={text} disablePadding sx={{ display: "block" }}>
                 <ListItemButton
                   sx={{
@@ -275,7 +275,7 @@ export default function App() {
                       justifyContent: "center",
                     }}
                   >
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    <MailIcon />
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
@@ -300,7 +300,7 @@ export default function App() {
                       justifyContent: "center",
                     }}
                   >
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    <MailIcon />
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>
