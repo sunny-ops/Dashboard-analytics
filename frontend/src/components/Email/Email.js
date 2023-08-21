@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet, NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useTheme } from "@mui/material/styles";
 import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
@@ -59,21 +60,31 @@ function Email(props) {
         </div>
         {items.map((v, id) => {
           return (
-            <div className="d-flex justify-content-center">
-              <div
-                key={id}
-                className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
-                style={{ width: "80%" }}
-              >
-                {renderIcon(v)}
+            <NavLink
+              to={v}
+              className={({ isActive }) => {
+                return isActive
+                  ? "active round-border nav-link"
+                  : "default round-border nav-link";
+              }}
+              style={{ "--color": theme.palette.primary.main }}
+            >
+              <div className="d-flex justify-content-center">
                 <div
-                  className="default font-md"
-                  style={{ textTransform: "capitalize" }}
+                  key={id}
+                  className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
+                  style={{ width: "80%" }}
                 >
-                  {v}
+                  {renderIcon(v)}
+                  <div
+                    className="default-color font-md"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    {v}
+                  </div>
                 </div>
               </div>
-            </div>
+            </NavLink>
           );
         })}
         <div className="d-flex justify-content-center mt-3 mb-2">
@@ -102,7 +113,9 @@ function Email(props) {
         })}
       </div>
 
-      <div className="col-7">haha</div>
+      <div className="col-9">
+        <Outlet />
+      </div>
     </div>
   );
 }
