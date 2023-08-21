@@ -18,14 +18,6 @@
   height: 42px;
 }
 
-/* .dropdown-toggle {
-  background-color: white !important;
-  background-image: url("../../images/cards/icons-more.png");
-  background-size: cover;
-  background-position: center;
-  border: 0 !important;
-} */
-
 .payment-dropdown .dropdown-toggle {
   background-color: white !important;
   background-image: url("../../images/cards/icons-more.png");
@@ -74,3 +66,12 @@
   background-image: url(../../images/svgs/growth.svg);
   height: 155px;
 }
+
+.income {
+  background-image: url(../../images/svgs/income.svg);
+  height: 220px;
+}
+
+/* Button:hover {
+  background-color: none !important;
+} */

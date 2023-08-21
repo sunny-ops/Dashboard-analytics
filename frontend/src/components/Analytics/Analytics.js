@@ -30,6 +30,12 @@ function Analytics(props) {
   const themeColor = theme.palette.primary.main;
   const [transitions, setTransitions] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [incomeContent, setIncomeContent] = useState([
+    "INCOME",
+    "EXPENSE",
+    "PROFIT",
+  ]);
+  const [incomeIdx, setIncomeIdx] = useState(0);
 
   useEffect(() => {
     axios
@@ -54,6 +60,10 @@ function Analytics(props) {
         console.log(err);
       });
   }, []);
+
+  const incomeBtn = (id) => {
+    setIncomeIdx(id);
+  };
 
   return (
     <>
@@ -328,10 +338,10 @@ function Analytics(props) {
                             className="smallIcon"
                           ></img>
                           <div className="d-flex flex-column">
-                            <div className="font-sm default">{v.name}</div>
-                            <div className="font-sm default-dark">
-                              {v.usage}
+                            <div className="font-sm default-default">
+                              {v.name}
                             </div>
+                            <div className="font-sm default">{v.usage}</div>
                           </div>
                         </div>
                         <div className="d-flex flex-row gap-3 align-items-center">
@@ -348,10 +358,57 @@ function Analytics(props) {
             </Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
-            <Item>xs=4</Item>
+            <Item className="box-padding">
+              <div className="mb-5">
+                {incomeContent.map((v, id) => {
+                  return (
+                    <Button
+                      key={id}
+                      style={{
+                        color:
+                          incomeIdx === id
+                            ? "white"
+                            : theme.palette.background.pen,
+                        backgroundColor:
+                          incomeIdx === id
+                            ? theme.palette.primary.main
+                            : "white",
+                      }}
+                      onClick={() => {
+                        incomeBtn(id);
+                      }}
+                      className="me-2"
+                    >
+                      {v}
+                    </Button>
+                  );
+                })}
+              </div>
+              <div className="d-flex flex-row gap-3 align-items-center mb-3">
+                <img
+                  alt="Paypal"
+                  src={require(`../../images/cards/paypal.png`)}
+                  className="smallIcon"
+                ></img>
+                <div className="d-flex flex-column">
+                  <div className="font-sm default-default">Total Income</div>
+                  <div className="font-sm default">$459.1k</div>
+                </div>
+              </div>
+              <div className="order income mb-2"></div>
+              <div className="d-flex flex-row justify-content-center gap-2">
+                <img src="" alt="income"></img>
+                <div>
+                  <div className="default-dark font-sm">Income this week</div>
+                  <div className="default font-sm">
+                    $39k less than last week
+                  </div>
+                </div>
+              </div>
+            </Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
-            <Item className="box-padding">
+            <Item className="box-padding" style={{ height: "464px" }}>
               <div className="d-flex flex-row justify-content-between mb-3">
                 <div className="default-dark font-lg">Transition</div>
                 <DropdownButton title="" className="payment-dropdown">
@@ -389,8 +446,8 @@ function Analytics(props) {
                           className="smallIcon"
                         ></img>
                         <div className="d-flex flex-column">
-                          <div className="font-sm default">{v.name}</div>
-                          <div className="font-sm default-dark">{v.usage}</div>
+                          <div className="font-sm default-dart">{v.name}</div>
+                          <div className="font-sm default">{v.usage}</div>
                         </div>
                       </div>
                       <div className="d-flex flex-row gap-3 align-items-center">
