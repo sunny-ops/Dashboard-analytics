@@ -11,8 +11,15 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Analytics.css";
 import Payment from "./Payment";
 import RevenueBar from "./RevenueBar";
-import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
+import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
+import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -193,7 +200,7 @@ function Analytics(props) {
                       <div>$32.5k</div>
                     </div>
 
-                    <AttachMoneyOutlinedIcon
+                    <DriveFolderUploadOutlinedIcon
                       sx={{
                         color: themeColor,
                         backgroundColor: theme.palette.primary.bgMain,
@@ -203,8 +210,8 @@ function Analytics(props) {
                       }}
                     />
                     <div className="d-flex flex-column">
-                      <div>2023</div>
-                      <div>$32.5k</div>
+                      <div>2022</div>
+                      <div>$41.2k</div>
                     </div>
                   </div>
                 </div>
@@ -295,7 +302,7 @@ function Analytics(props) {
             <Item className="box-padding">
               <div>
                 <div className="d-flex flex-row justify-content-between">
-                  <div className="default-dark font-lg">Order Statistics</div>
+                  <div className="default-dark font-md">Order Statistics</div>
                   <DropdownButton title="" className="payment-dropdown">
                     <Dropdown.Item
                       style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -317,7 +324,7 @@ function Analytics(props) {
                     </Dropdown.Item>
                   </DropdownButton>
                 </div>
-                <div className="default font-sm mb-4">42.82k Total Sales</div>
+                <div className="default font-xs mb-4">42.82k Total Sales</div>
                 <div className="d-flex flex-row">
                   <div>
                     <div className="default-dark font-lg">8,258</div>
@@ -410,7 +417,7 @@ function Analytics(props) {
           <Grid item className="col-lg-4 col-12">
             <Item className="box-padding" style={{ height: "464px" }}>
               <div className="d-flex flex-row justify-content-between mb-3">
-                <div className="default-dark font-lg">Transition</div>
+                <div className="default-dark font-md">Transition</div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -461,6 +468,86 @@ function Analytics(props) {
                 })}
               </ul>
             </Item>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
+        <Grid container spacing={2}>
+          <Grid item xs={6} className="col-lg-6 col-12">
+            <Item className="box-padding">
+              <div className="d-flex flex-row justify-content-between mb-3">
+                <div className="default-dark font-md">Activity Timeline</div>
+                <DropdownButton title="" className="payment-dropdown">
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Refresh
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Share
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                    href="#"
+                  >
+                    Update
+                  </Dropdown.Item>
+                </DropdownButton>
+              </div>
+              <Timeline>
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>Eat</TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>Code</TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                  </TimelineSeparator>
+                  <TimelineContent>Sleep</TimelineContent>
+                </TimelineItem>
+              </Timeline>
+              {/* <div className="d-flex flex-row justify-content-between">
+                <div className="d-flex flex-row gap-3">
+                  <AdjustOutlinedIcon sx={{ color: themeColor }} />
+                  <div className="d-flex flex-column">
+                    <div className="font-sm default-dark">
+                      12 Invoices have been paid
+                    </div>
+                    <div className="font-xs default">
+                      Invoices have been paid to the company
+                    </div>
+                    <div className="d-flex flex-row align-items-center">
+                      <img
+                        src={require(`../../images/icons/file-icons/pdf.png`)}
+                        className="xsIcon"
+                      ></img>
+                      <div className="font-sm default-dark ms-3">
+                        Invoices.pdf
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="default font-sm">12 min ago</div>
+              </div> */}
+            </Item>
+          </Grid>
+          <Grid item xs={6} className="col-lg-6 col-12">
+            <Item>xs=4</Item>
           </Grid>
         </Grid>
       </Box>
