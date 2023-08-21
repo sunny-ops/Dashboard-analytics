@@ -13,7 +13,15 @@ function RevenueBar(props) {
     datasets: [
       {
         label: "2022",
-        data: [[1, 12], [1, 19], [1, 3], 5, 2, 3, 3],
+        data: [
+          [1, 12],
+          [1, 19],
+          [1, 5],
+          [1, 9],
+          [1, 6],
+          [1, 4],
+          [1, 10],
+        ],
         backgroundColor: [themeColor],
         borderColor: [themeColor],
         // borderWidth: 1,
@@ -24,7 +32,15 @@ function RevenueBar(props) {
       },
       {
         label: "2023",
-        data: [-18, -16, -3, -5, -2, -3, -3],
+        data: [
+          [-1, -18],
+          [-1, -16],
+          [-1, -13],
+          [-1, -8],
+          [-1, -5],
+          [-1, -9],
+          [-1, -14],
+        ],
         backgroundColor: [themeColor],
         borderColor: [themeColor],
         // borderWidth: 1,

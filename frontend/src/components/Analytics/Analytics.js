@@ -19,10 +19,10 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Browser from "./Browser";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -598,7 +598,9 @@ function Analytics(props) {
             </Item>
           </Grid>
           <Grid item xs={6} className="col-lg-6 col-12">
-            <Item>xs=4</Item>
+            <Item className="box-padding">
+              <Browser />
+            </Item>
           </Grid>
         </Grid>
       </Box>
