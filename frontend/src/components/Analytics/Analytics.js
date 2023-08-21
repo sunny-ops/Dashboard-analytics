@@ -485,10 +485,12 @@ function Analytics(props) {
       </Box>
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
         <Grid container spacing={2}>
-          <Grid item xs={6} className="col-lg-6 col-12">
-            <Item className="box-padding">
+          <Grid item className="col-lg-6 col-12">
+            <Item className="box-padding" style={{ height: "415px" }}>
               <div className="d-flex flex-row justify-content-between mb-3">
-                <div className="default-dark font-lg">Activity Timeline</div>
+                <div className="default-dark font-lg mb-3">
+                  Activity Timeline
+                </div>
                 <DropdownButton title="" className="payment-dropdown">
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -609,7 +611,7 @@ function Analytics(props) {
               </Timeline>
             </Item>
           </Grid>
-          <Grid item xs={6} className="col-lg-6 col-12">
+          <Grid item className="col-lg-6 col-12">
             <Item className="box-padding">
               <Browser items={items} />
             </Item>
