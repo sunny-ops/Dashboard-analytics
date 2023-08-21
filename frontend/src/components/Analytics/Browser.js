@@ -7,6 +7,7 @@ import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 import { styled } from "@mui/material/styles";
+import axios from "axios";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -25,14 +26,27 @@ function Browser(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
   const [browserContent, setBrowserContent] = useState([
-    "BROWSER",
-    "PERATING SYSTEM",
-    "COUNTRY",
+    "browser",
+    "operating system",
+    "country",
   ]);
   const [browserIdx, setBrowserIdx] = useState(0);
+  const [items, setItems] = useState([]);
   const browserBtn = (id) => {
     setBrowserIdx(id);
   };
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8080/api/analytics/browsers/browser")
+      .then((res) => {
+        setItems(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  // console.log(items[0].name);
   return (
     <div>
       <div className="ms-4 mb-3">
@@ -58,14 +72,20 @@ function Browser(props) {
       </div>
       <div className="d-flex flex-row justify-content-around default font-sm">
         <div>NO.</div>
-        <div>{browserContent[browserIdx]}</div>
+        <div style={{ textTransform: "uppercase" }}>
+          {browserContent[browserIdx]}
+        </div>
         <div>VISITS</div>
         <div>DATA IN PERCENTAGE</div>
       </div>
-      <Box sx={{ flexGrow: 1 }}>
+      {/* <div>{items[0].name}</div> */}
+      {/* {items.map((v, id) => {
+        return <div>v.name</div>;
+      })} */}
+      {/* <Box sx={{ flexGrow: 1 }}>
         <br />
         <BorderLinearProgress variant="determinate" value={50} />
-      </Box>
+      </Box> */}
     </div>
   );
 }

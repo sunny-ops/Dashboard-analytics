@@ -68,6 +68,17 @@ function Analytics(props) {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8080/api/analytics/browsers/browser")
+      .then((res) => {
+        setItems(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const incomeBtn = (id) => {
     setIncomeIdx(id);
   };
