@@ -43,6 +43,7 @@ function Analytics(props) {
     "PROFIT",
   ]);
   const [incomeIdx, setIncomeIdx] = useState(0);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     axios
@@ -610,7 +611,7 @@ function Analytics(props) {
           </Grid>
           <Grid item xs={6} className="col-lg-6 col-12">
             <Item className="box-padding">
-              <Browser />
+              <Browser items={items} />
             </Item>
           </Grid>
         </Grid>

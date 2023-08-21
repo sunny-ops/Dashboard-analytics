@@ -31,20 +31,10 @@ function Browser(props) {
     "country",
   ]);
   const [browserIdx, setBrowserIdx] = useState(0);
-  const [items, setItems] = useState([]);
+  const items = props.items;
   const browserBtn = (id) => {
     setBrowserIdx(id);
   };
-  useEffect(() => {
-    axios
-      .get("http://127.0.0.1:8080/api/analytics/browsers/browser")
-      .then((res) => {
-        setItems(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
 
   // console.log(items[0].name);
   return (
@@ -78,10 +68,26 @@ function Browser(props) {
         <div>VISITS</div>
         <div>DATA IN PERCENTAGE</div>
       </div>
-      {/* <div>{items[0].name}</div> */}
-      {/* {items.map((v, id) => {
-        return <div>v.name</div>;
-      })} */}
+
+      {items.map((v, id) => {
+        return (
+          <div className="d-flex flex-row justify-content-around align-items-baseline default font-sm mb-3">
+            <div>{id + 1}</div>
+            <div className="d-flex flex-row align-items-center">
+              <img
+                className="xsIcon me-2"
+                src={require(`../../images/cards/${v.img}`)}
+              ></img>
+              <div>{v.name}</div>
+            </div>
+            <div>{v.visits}</div>
+            <Box sx={{ flexGrow: 0.3 }}>
+              <BorderLinearProgress variant="determinate" value={v.percent} />
+            </Box>
+            <div>{`${v.percent}%`}</div>
+          </div>
+        );
+      })}
       {/* <Box sx={{ flexGrow: 1 }}>
         <br />
         <BorderLinearProgress variant="determinate" value={50} />
