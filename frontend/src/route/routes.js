@@ -14,6 +14,7 @@ const routes = [
   {
     path: "email",
     element: <Email />,
+    // element: <Navigate to="/email" />,
     children: [
       {
         path: "inbox",

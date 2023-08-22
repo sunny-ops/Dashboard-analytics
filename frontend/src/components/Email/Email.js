@@ -9,6 +9,7 @@ import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import Content from "./Content";
 
 function Email(props) {
   const theme = useTheme();
@@ -33,19 +34,6 @@ function Email(props) {
       return null;
     }
   }
-
-  // load data for emails
-  //   const [rows, setRows] = useState();
-  //   useEffect(() => {
-  //     axios
-  //       .get("http://127.0.0.1:8080/api/emails/browsers/inbox")
-  //       .then((res) => {
-  //         setRows(res.data);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }, []);
 
   return (
     <div
@@ -138,6 +126,7 @@ function Email(props) {
       </div>
 
       <div className="col-9">
+        {/* <Content value="inbox" /> */}
         <Outlet />
       </div>
     </div>

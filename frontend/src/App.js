@@ -29,6 +29,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import MailIcon from "@mui/icons-material/Mail";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
 import DraftsIcon from "@mui/icons-material/Drafts";
@@ -128,8 +130,10 @@ export default function App() {
   const [openNest, setOpenNest] = React.useState(false);
 
   const iconMap = {
-    Email: MailIcon,
-    Chat: ChatBubbleOutlineOutlinedIcon,
+    email: MailIcon,
+    chat: ChatBubbleOutlineOutlinedIcon,
+    user: GroupOutlinedIcon,
+    invoice: ReceiptOutlinedIcon,
   };
 
   function renderIcon(iconName) {
@@ -274,68 +278,103 @@ export default function App() {
               </List>
             </Collapse>
           </List>
-          <List sx={{ color: "background.pen" }}>
-            {["Email", "Chat"].map((text, index) => (
-              <ListItem key={index} disablePadding sx={{ display: "block" }}>
-                <NavLink
-                  to={text}
-                  className={({ isActive }) => {
-                    return isActive
-                      ? "active round-border nav-link"
-                      : "default round-border nav-link";
-                  }}
-                  style={{ "--color": myTheme.palette.primary.main }}
-                >
-                  <ListItemButton
-                    sx={{
-                      minHeight: 48,
-                      justifyContent: open ? "initial" : "center",
-                      px: 2.5,
+          <Divider />
+          <div className="px-2">
+            <div>
+              <div className="default mt-3 ms-3 font-xs">APPS & PAGES</div>
+            </div>
+            <List sx={{ color: "background.pen" }}>
+              {["email", "chat", "user", "invoice"].map((text, index) => (
+                <ListItem key={index} disablePadding sx={{ display: "block" }}>
+                  <NavLink
+                    to={text}
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "active round-border nav-link"
+                        : "default round-border nav-link";
                     }}
+                    style={{ "--color": myTheme.palette.primary.main }}
                   >
-                    <ListItemIcon
+                    <ListItemButton
+                      className="round-border"
                       sx={{
-                        minWidth: 0,
-                        mr: open ? 3 : "auto",
-                        justifyContent: "center",
+                        minHeight: 48,
+                        justifyContent: open ? "initial" : "center",
+                        px: 2.5,
                       }}
                     >
-                      {renderIcon(text)}
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={text}
-                      sx={{ opacity: open ? 1 : 0 }}
-                    />
-                  </ListItemButton>
-                </NavLink>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List sx={{ color: "background.pen" }}>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem key={text} disablePadding sx={{ display: "block" }}>
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
+                      <ListItemIcon
+                        sx={{
+                          minWidth: 0,
+                          mr: open ? 3 : "auto",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {renderIcon(text)}
+                      </ListItemIcon>
+                      <ListItemText
+                        style={{ textTransform: "capitalize" }}
+                        primary={text}
+                        sx={{ opacity: open ? 1 : 0 }}
+                      />
+                    </ListItemButton>
+                  </NavLink>
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+          </div>
+          <div className="px-2">
+            <div>
+              <div className="default mt-3 ms-3 font-xs">USER INTERFACE</div>
+            </div>
+            <List sx={{ color: "background.pen" }}>
+              {["typography", "icons", "editor", "calendar"].map(
+                (text, index) => (
+                  <ListItem
+                    key={index}
+                    disablePadding
+                    sx={{ display: "block" }}
                   >
-                    <MailIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+                    <NavLink
+                      to={text}
+                      className={({ isActive }) => {
+                        return isActive
+                          ? "active round-border nav-link"
+                          : "default round-border nav-link";
+                      }}
+                      style={{ "--color": myTheme.palette.primary.main }}
+                    >
+                      <ListItemButton
+                        className="round-border"
+                        sx={{
+                          minHeight: 48,
+                          justifyContent: open ? "initial" : "center",
+                          px: 2.5,
+                        }}
+                      >
+                        <ListItemIcon
+                          sx={{
+                            minWidth: 0,
+                            mr: open ? 3 : "auto",
+                            justifyContent: "center",
+                          }}
+                        >
+                          {renderIcon(text)}
+                        </ListItemIcon>
+                        <ListItemText
+                          style={{ textTransform: "capitalize" }}
+                          primary={text}
+                          sx={{ opacity: open ? 1 : 0 }}
+                        />
+                      </ListItemButton>
+                    </NavLink>
+                  </ListItem>
+                )
+              )}
+            </List>
+            <Divider />
+          </div>
         </Drawer>
         <Box
           component="main"

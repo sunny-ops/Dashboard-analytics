@@ -75,7 +75,7 @@ function Chat(props) {
             <SearchOutlinedIcon />
           </div>
         </div>
-        <div className="font-lg" style={{ color: themeColor }}>
+        <div className="font-lg mb-3" style={{ color: themeColor }}>
           Charts
         </div>
 
