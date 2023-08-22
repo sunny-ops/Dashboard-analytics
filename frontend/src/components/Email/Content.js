@@ -19,10 +19,11 @@ const columns = [
     width: 20,
     renderCell: (params) => (
       <img
-        src={params.row.avatarUrl}
+        // src={params.row.avatarUrl}
+        src={require(`../../images/avatars/${params.row.avatarURL}`)}
         alt="Avatar"
         width="40"
-        style={{ borderRadius: "50px" }}
+        style={{ borderRadius: "45px" }}
       />
     ),
   },
@@ -80,8 +81,6 @@ function Content(props) {
   //   console.log(rows.length);
   return (
     <div className="d-flex flex-column align-items-center">
-      {rows ? <div>{rows.length}</div> : <div />}
-      {/* <div>{props.value}</div> */}
       {rows ? (
         <>
           <div
@@ -96,6 +95,7 @@ function Content(props) {
               rows={rows}
               columns={columns}
               getRowId={(row) => row._id}
+              rowHeight={70}
               initialState={{
                 pagination: {
                   paginationModel: { page: 0, pageSize: 10 },

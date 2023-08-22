@@ -58,7 +58,7 @@ function Email(props) {
           borderRight: "1px solid rgba(50, 71, 92, 0.12)",
         }}
       >
-        <div className="d-flex justify-content-center mt-3 mb-3">
+        <div className="d-flex justify-content-center mt-5 mb-3">
           <Button
             style={{
               color: "white",
