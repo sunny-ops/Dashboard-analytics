@@ -1,30 +1,57 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import "./Content.css";
+import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 const columns = [
-  { field: "id", headerName: "ID", width: 70 },
-  { field: "firstName", headerName: "First name", width: 130 },
-  { field: "lastName", headerName: "Last name", width: 130 },
   {
-    field: "age",
-    headerName: "Age",
-    type: "number",
-    width: 90,
+    field: "starred",
+    headerName: "",
+    width: 50,
+    renderCell: (params) => <StarBorderOutlinedIcon />,
+  },
+  {
+    field: "avatar",
+    headerName: "",
+    width: 20,
+    renderCell: (params) => (
+      <img
+        src={params.row.avatarUrl}
+        alt="Avatar"
+        width="40"
+        style={{ borderRadius: "50px" }}
+      />
+    ),
   },
   {
     field: "fullName",
-    headerName: "Full name",
+    headerName: "",
     description: "This column has a value getter and is not sortable.",
     sortable: false,
-    width: 160,
+    width: 650,
     valueGetter: (params) =>
       `${params.row.firstName || ""} ${params.row.lastName || ""}`,
   },
+  { field: "time", headerName: "", width: 100 },
 ];
 
 const rows = [
-  { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-  { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
+  {
+    id: 1,
+    lastName: "Snow",
+    firstName: "Jon",
+    age: 35,
+    avatarUrl: "https://solelysneat.vercel.app/images/avatars/1.png",
+    time: "11:45pm",
+  },
+  {
+    id: 2,
+    lastName: "Lannister",
+    firstName: "Cersei",
+    age: 42,
+    time: "11:45pm",
+  },
   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
   { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
   { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
@@ -37,16 +64,24 @@ const rows = [
 function Content(props) {
   return (
     <div className="d-flex flex-column align-items-center">
-      <div>{props.value}</div>
-      <div style={{ height: 400, width: "90%" }}>
+      {/* <div>{props.value}</div> */}
+      <div
+        className="d-flex flex-row mt-5 mb-3 py-2 align-items-center round-border ps-3"
+        style={{ width: "90%", border: "1px solid rgba(224, 224, 224, 1)" }}
+      >
+        <SearchOutlinedIcon />
+        <div className="default ms-3 font-md">Search</div>
+      </div>
+      <div style={{ height: "80vh", width: "90%" }}>
         <DataGrid
           rows={rows}
           columns={columns}
           initialState={{
             pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
+              paginationModel: { page: 0, pageSize: 10 },
             },
           }}
+          pageSize={10} // 添加此行以设置每页的行数为10
           pageSizeOptions={[5, 10]}
           checkboxSelection
         />
