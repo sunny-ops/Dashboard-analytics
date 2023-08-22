@@ -276,7 +276,7 @@ export default function App() {
           </List>
           <List sx={{ color: "background.pen" }}>
             {["Email", "Chat"].map((text, index) => (
-              <ListItem disablePadding sx={{ display: "block" }}>
+              <ListItem key={index} disablePadding sx={{ display: "block" }}>
                 <NavLink
                   to={text}
                   className={({ isActive }) => {

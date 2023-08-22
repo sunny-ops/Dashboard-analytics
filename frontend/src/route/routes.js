@@ -39,6 +39,22 @@ const routes = [
         path: "trash",
         element: <Content value="trash" />,
       },
+      {
+        path: "personal",
+        element: <Content value="personal" />,
+      },
+      {
+        path: "company",
+        element: <Content value="company" />,
+      },
+      {
+        path: "important",
+        element: <Content value="important" />,
+      },
+      {
+        path: "private",
+        element: <Content value="private" />,
+      },
     ],
   },
   { path: "chat", element: <Chat /> },

@@ -34,6 +34,19 @@ function Email(props) {
     }
   }
 
+  // load data for emails
+  //   const [rows, setRows] = useState();
+  //   useEffect(() => {
+  //     axios
+  //       .get("http://127.0.0.1:8080/api/emails/browsers/inbox")
+  //       .then((res) => {
+  //         setRows(res.data);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   }, []);
+
   return (
     <div
       className="default round-border mt-3 d-flex flex-row"
@@ -61,6 +74,7 @@ function Email(props) {
         {items.map((v, id) => {
           return (
             <NavLink
+              key={id}
               to={v}
               className={({ isActive }) => {
                 return isActive
@@ -77,7 +91,7 @@ function Email(props) {
                 >
                   {renderIcon(v)}
                   <div
-                    className="default-color font-md"
+                    className="font-md"
                     style={{ textTransform: "capitalize" }}
                   >
                     {v}
@@ -94,21 +108,31 @@ function Email(props) {
         </div>
         {labels.map((v, id) => {
           return (
-            <div className="d-flex justify-content-center">
-              <div
-                key={id}
-                className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
-                style={{ width: "80%" }}
-              >
-                <FiberManualRecordIcon sx={{ fontSize: "16px" }} />
+            <NavLink
+              key={id}
+              to={v}
+              className={({ isActive }) => {
+                return isActive
+                  ? "active round-border nav-link"
+                  : "default round-border nav-link";
+              }}
+              style={{ "--color": theme.palette.primary.main }}
+            >
+              <div key={id} className="d-flex justify-content-center">
                 <div
-                  className="default font-md"
-                  style={{ textTransform: "capitalize" }}
+                  className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
+                  style={{ width: "80%" }}
                 >
-                  {v}
+                  <FiberManualRecordIcon sx={{ fontSize: "16px" }} />
+                  <div
+                    className="font-md"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    {v}
+                  </div>
                 </div>
               </div>
-            </div>
+            </NavLink>
           );
         })}
       </div>
