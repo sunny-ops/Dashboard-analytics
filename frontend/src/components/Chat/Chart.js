@@ -27,7 +27,7 @@ function Chat(props) {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   console.log("chat", chatContent);
   const items = chatContent.slice(0, 12);
@@ -96,7 +96,7 @@ function Chat(props) {
                 className="me-2 d-flex flex-row p-2 round-border"
               >
                 <img
-                  src={require("../../images/avatars/${v.avatarURL}")}
+                  src={require(`../../images/avatars/${v.avatarURL}`)}
                   className="portrait-sm me-3"
                 />
                 <div className="d-flex flex-column">
