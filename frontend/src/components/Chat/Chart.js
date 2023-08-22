@@ -100,10 +100,10 @@ function Chat(props) {
                   className="portrait-sm me-3"
                 />
                 <div className="d-flex flex-column">
-                  <div>Full Name</div>
-                  <div>Hello</div>
+                  <div>{v.firstName}</div>
+                  <div>{v.lastName}</div>
                 </div>
-                <div className="flex-grow-1 text-end">Time</div>
+                <div className="flex-grow-1 text-end">{v.time}</div>
               </div>
             );
           })}
@@ -111,25 +111,29 @@ function Chat(props) {
       </div>
 
       <div className="col-8 box-padding">
-        <div
-          className="d-flex flex-row py-3 mb-3 pb-2 align-items-center"
-          style={{ borderBottom: "1px solid rgba(50, 71, 92, 0.12)" }}
-        >
-          <img
-            src={require("../../images/avatars/2.png")}
-            className="portrait-sm me-3"
-          />
-          <div className="d-flex flex-column">
-            <div>Full Name</div>
-            <div>Hello</div>
+        {items.length > 0 ? (
+          <div
+            className="d-flex flex-row py-3 mb-3 pb-2 align-items-center"
+            style={{ borderBottom: "1px solid rgba(50, 71, 92, 0.12)" }}
+          >
+            <img
+              src={require(`../../images/avatars/${items[chatIdx].avatarURL}`)}
+              className="portrait-sm me-3"
+            />
+            <div className="d-flex flex-column">
+              <div>{items[chatIdx].firstName}</div>
+              <div>{items[chatIdx].lastName}</div>
+            </div>
+            <div className="flex-grow-1 text-end">
+              <LocalPhoneOutlinedIcon className="me-2" />
+              <VideoChatOutlinedIcon className="me-2" />
+              <SearchOutlinedIcon className="me-2" />
+              <MoreVertOutlinedIcon className="me-2" />
+            </div>
           </div>
-          <div className="flex-grow-1 text-end">
-            <LocalPhoneOutlinedIcon className="me-2" />
-            <VideoChatOutlinedIcon className="me-2" />
-            <SearchOutlinedIcon className="me-2" />
-            <MoreVertOutlinedIcon className="me-2" />
-          </div>
-        </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
