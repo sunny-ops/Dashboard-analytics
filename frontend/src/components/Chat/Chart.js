@@ -2,52 +2,62 @@ import React from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useTheme } from "@mui/material/styles";
-import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
-import UnarchiveOutlinedIcon from "@mui/icons-material/UnarchiveOutlined";
-import ModeEditOutlinedIcon from "@mui/icons-material/ModeEditOutlined";
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { useState, useEffect } from "react";
+
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import "../../General.css";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import VideoChatOutlinedIcon from "@mui/icons-material/VideoChatOutlined";
+import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import axios from "axios";
 
 function Chat(props) {
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
-  const items = ["inbox", "sent", "draft", "starred", "spam", "trash"];
-  const iconMap = {
-    inbox: ArchiveOutlinedIcon,
-    sent: UnarchiveOutlinedIcon,
-    draft: ModeEditOutlinedIcon,
-    starred: StarBorderOutlinedIcon,
-    spam: ReportGmailerrorredOutlinedIcon,
-    trash: DeleteOutlineOutlinedIcon,
-  };
-  const labels = ["personal", "company", "important", "private"];
 
-  function renderIcon(iconName) {
-    const IconComponent = iconMap[iconName];
-    if (IconComponent) {
-      return <IconComponent />;
-    } else {
-      console.warn(`Icon named "${iconName}" not found in iconMap`);
-      return null;
-    }
-  }
+  const [chatContent, setChatContent] = useState([]);
+  const [chatIdx, setChatIdx] = useState(0);
+
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8080/api/apps/emails/sent`)
+      .then((res) => {
+        setChatContent(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
+  console.log("chat", chatContent);
+  const items = chatContent.slice(0, 12);
+  console.log(items);
+
+  const chatBtn = (id) => {
+    setChatIdx(id);
+    // axios
+    //   .get(`http://127.0.0.1:8080/api/analytics/chats/${chatContent[id]}`)
+    //   .then((res) => {
+    //     setItems(res.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+  };
+
   return (
     <div
       className="default round-border mt-3 d-flex flex-row"
       style={{ height: "100vh" }}
     >
       <div
-        className="col-3 box-padding"
+        className="col-4 box-padding"
         style={{
           borderRight: "1px solid rgba(50, 71, 92, 0.12)",
         }}
       >
         <div
-          className="d-flex gap-3 align-items-center py-3"
+          className="d-flex gap-3 align-items-center py-3 mb-3"
           style={{ borderBottom: "1px solid rgba(50, 71, 92, 0.12)" }}
         >
           <img
@@ -58,81 +68,68 @@ function Chat(props) {
             className="round-border p-1"
             style={{
               border: "2px solid",
-              borderColor: theme.palette.primary.main,
+              borderColor: themeColor,
               flexGrow: "1",
             }}
           >
             <SearchOutlinedIcon />
           </div>
         </div>
-        {items.map((v, id) => {
-          return (
-            <NavLink
-              key={id}
-              to={v}
-              className={({ isActive }) => {
-                return isActive
-                  ? "active round-border nav-link"
-                  : "default round-border nav-link";
-              }}
-              style={{ "--color": theme.palette.primary.main }}
-            >
-              <div className="d-flex justify-content-center">
-                <div
-                  key={id}
-                  className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
-                  style={{ width: "80%" }}
-                >
-                  {renderIcon(v)}
-                  <div
-                    className="font-md"
-                    style={{ textTransform: "capitalize" }}
-                  >
-                    {v}
-                  </div>
-                </div>
-              </div>
-            </NavLink>
-          );
-        })}
-        <div className="d-flex justify-content-center mt-3 mb-2">
-          <div style={{ width: "80%" }} className="default">
-            Labels
-          </div>
+        <div className="font-lg" style={{ color: themeColor }}>
+          Charts
         </div>
-        {labels.map((v, id) => {
-          return (
-            <NavLink
-              key={id}
-              to={v}
-              className={({ isActive }) => {
-                return isActive
-                  ? "active round-border nav-link"
-                  : "default round-border nav-link";
-              }}
-              style={{ "--color": theme.palette.primary.main }}
-            >
-              <div key={id} className="d-flex justify-content-center">
-                <div
-                  className="d-flex flex-row justify-content-start align-items-center py-2 gap-3"
-                  style={{ width: "80%" }}
-                >
-                  <FiberManualRecordIcon sx={{ fontSize: "16px" }} />
-                  <div
-                    className="font-md"
-                    style={{ textTransform: "capitalize" }}
-                  >
-                    {v}
-                  </div>
+
+        <div className=" mb-3 d-flex flex-column">
+          {items.map((v, id) => {
+            return (
+              <div
+                key={id}
+                style={{
+                  color:
+                    chatIdx === id ? "white" : theme.palette.background.pen,
+                  backgroundColor:
+                    chatIdx === id ? theme.palette.primary.main : "white",
+                }}
+                onClick={() => {
+                  chatBtn(id);
+                }}
+                className="me-2 d-flex flex-row p-2 round-border"
+              >
+                <img
+                  src={require("../../images/avatars/${v.avatarURL}")}
+                  className="portrait-sm me-3"
+                />
+                <div className="d-flex flex-column">
+                  <div>Full Name</div>
+                  <div>Hello</div>
                 </div>
+                <div className="flex-grow-1 text-end">Time</div>
               </div>
-            </NavLink>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
-      <div className="col-9">
-        <Outlet />
+      <div className="col-8 box-padding">
+        <div
+          className="d-flex flex-row py-3 mb-3 pb-2 align-items-center"
+          style={{ borderBottom: "1px solid rgba(50, 71, 92, 0.12)" }}
+        >
+          <img
+            src={require("../../images/avatars/2.png")}
+            className="portrait-sm me-3"
+          />
+          <div className="d-flex flex-column">
+            <div>Full Name</div>
+            <div>Hello</div>
+          </div>
+          <div className="flex-grow-1 text-end">
+            <LocalPhoneOutlinedIcon className="me-2" />
+            <VideoChatOutlinedIcon className="me-2" />
+            <SearchOutlinedIcon className="me-2" />
+            <MoreVertOutlinedIcon className="me-2" />
+          </div>
+        </div>
       </div>
     </div>
   );
