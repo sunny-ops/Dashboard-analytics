@@ -38,3 +38,9 @@ a {
 .border-circle {
   border-radius: 50px;
 }
+
+.portrait-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
