@@ -5,6 +5,8 @@ import Ecommerce from "../components/Ecommerce/Ecommerce";
 import Email from "../components/Email/Email";
 import Chat from "../components/Chat/Chart";
 import Content from "../components/Email/Content";
+import User from "../components/User/User";
+import Invoice from "../components/Invoice/Invoice";
 
 const routes = [
   { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
@@ -59,6 +61,8 @@ const routes = [
     ],
   },
   { path: "chat", element: <Chat /> },
+  { path: "user", element: <User /> },
+  { path: "invoice", element: <Invoice /> },
 ];
 
 export default routes;
