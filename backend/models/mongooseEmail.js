@@ -5,7 +5,7 @@ const time = require("../jsons/time.json");
 
 let emails = [];
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 200; i++) {
   const firstNameIdx = Math.floor(Math.random() * 10);
   const lastNameIdx = Math.floor(Math.random() * 10);
   const timeIdx = Math.floor(Math.random() * 30);
