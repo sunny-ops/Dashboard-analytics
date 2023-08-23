@@ -41,6 +41,14 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
+import SignalWifi4BarIcon from "@mui/icons-material/SignalWifi4Bar";
+import QueryStatsIcon from "@mui/icons-material/QueryStats";
+import PieChartIcon from "@mui/icons-material/PieChart";
+import MultilineChartOutlinedIcon from "@mui/icons-material/MultilineChartOutlined";
+import TrackChangesOutlinedIcon from "@mui/icons-material/TrackChangesOutlined";
+import BubbleChartOutlinedIcon from "@mui/icons-material/BubbleChartOutlined";
+import EqualizerOutlinedIcon from "@mui/icons-material/EqualizerOutlined";
 
 import "./General.css";
 import "./App.css";
@@ -142,6 +150,13 @@ export default function App() {
     icons: InsertEmoticonIcon,
     editor: BorderColorIcon,
     calendar: CalendarMonthIcon,
+    line: StackedLineChartIcon,
+    bar: EqualizerOutlinedIcon,
+    area: QueryStatsIcon,
+    pie: PieChartIcon,
+    polar: MultilineChartOutlinedIcon,
+    radar: TrackChangesOutlinedIcon,
+    bubble: BubbleChartOutlinedIcon,
   };
 
   function renderIcon(iconName) {
@@ -374,6 +389,57 @@ export default function App() {
                   </NavLink>
                 </ListItem>
               ))}
+            </List>
+            <Divider />
+          </div>
+          <div className="px-2">
+            <div>
+              <div className="default mt-3 ms-3 font-xs">CHARTS</div>
+            </div>
+            <List sx={{ color: "background.pen" }}>
+              {["line", "bar", "area", "pie", "polar", "radar", "bubble"].map(
+                (text, index) => (
+                  <ListItem
+                    key={index}
+                    disablePadding
+                    sx={{ display: "block" }}
+                  >
+                    <NavLink
+                      to={text}
+                      className={({ isActive }) => {
+                        return isActive
+                          ? "active round-border nav-link"
+                          : "default round-border nav-link";
+                      }}
+                      style={{ "--color": myTheme.palette.primary.main }}
+                    >
+                      <ListItemButton
+                        className="round-border"
+                        sx={{
+                          minHeight: 48,
+                          justifyContent: open ? "initial" : "center",
+                          px: 2.5,
+                        }}
+                      >
+                        <ListItemIcon
+                          sx={{
+                            minWidth: 0,
+                            mr: open ? 3 : "auto",
+                            justifyContent: "center",
+                          }}
+                        >
+                          {renderIcon(text)}
+                        </ListItemIcon>
+                        <ListItemText
+                          style={{ textTransform: "capitalize" }}
+                          primary={text}
+                          sx={{ opacity: open ? 1 : 0 }}
+                        />
+                      </ListItemButton>
+                    </NavLink>
+                  </ListItem>
+                )
+              )}
             </List>
             <Divider />
           </div>
