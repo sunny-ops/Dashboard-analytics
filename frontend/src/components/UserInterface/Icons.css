@@ -1,0 +1,26 @@
+.css-lmzh3f {
+  padding: 1.5rem;
+  display: flex;
+  /* background-color: white; */
+}
+
+.css-h2qpui {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 1.5rem;
+  margin-left: 0 !important;
+  width: calc(100% + 1.5rem);
+  margin-left: -1.5rem;
+  gap: 20px;
+}
+
+.css-1848kuw {
+  background-color: rgb(255, 255, 255);
+  color: rgba(50, 71, 92, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: rgba(50, 71, 92, 0.1) 0px 2px 10px 0px;
+  background-image: none;
+  overflow: hidden;
+  border-radius: 8px;
+}
