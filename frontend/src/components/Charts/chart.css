@@ -1,0 +1,25 @@
+.bar {
+  background-image: url(../../images/svgs/barchart.svg);
+  height: 600px;
+  background-size: contain;
+}
+
+.line {
+  background-image: url(../../images/svgs/linechart.svg);
+  height: 600px;
+  background-size: contain;
+}
+
+.radar {
+  background-image: url(../../images/svgs/radarchart.svg);
+  height: 600px;
+  background-size: contain;
+  left: 120px !important;
+  position: relative;
+}
+
+.bubble {
+  background-image: url(../../images/svgs/bubblechart.svg);
+  height: 600px;
+  background-size: contain;
+}

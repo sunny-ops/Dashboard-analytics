@@ -109,7 +109,7 @@ function RevenueBar(props) {
     <Bar
       data={data}
       options={options}
-      //   style={{ height: "312px", width: "80%" }}
+      // style={{ height: "312px", width: "80%" }}
     />
   );
 }

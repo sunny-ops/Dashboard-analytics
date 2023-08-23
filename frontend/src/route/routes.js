@@ -11,6 +11,13 @@ import Calendar from "../components/UserInterface/Calendar";
 import Editor from "../components/UserInterface/Editor";
 import Icons from "../components/UserInterface/Icons";
 import Typography from "../components/UserInterface/Typography";
+import LineChart from "../components/Charts/LineChart";
+import BarChart from "../components/Charts/BarChart";
+import AreaChart from "../components/Charts/AreaChart";
+import BubbleChart from "../components/Charts/BubbleChart";
+import PieChart from "../components/Charts/PieChart";
+import PolarChart from "../components/Charts/PolarChart";
+import RadarChart from "../components/Charts/RadarChart";
 
 const routes = [
   { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
@@ -71,6 +78,13 @@ const routes = [
   { path: "editor", element: <Editor /> },
   { path: "icons", element: <Icons /> },
   // { path: "calendar", element: <Calendar /> },
+  { path: "area", element: <AreaChart /> },
+  { path: "bar", element: <BarChart /> },
+  { path: "bubble", element: <BubbleChart /> },
+  { path: "line", element: <LineChart /> },
+  { path: "pie", element: <PieChart /> },
+  { path: "polar", element: <PolarChart /> },
+  { path: "radar", element: <RadarChart /> },
 ];
 
 export default routes;
