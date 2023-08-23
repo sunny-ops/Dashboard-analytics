@@ -12,8 +12,14 @@ function User(props) {
   const [plan, setPlan] = React.useState("");
   const [status, setStatus] = React.useState("");
 
-  const handleChange = (event) => {
+  const handleChangeRole = (event) => {
     setRole(event.target.value);
+  };
+  const handleChangePlan = (event) => {
+    setPlan(event.target.value);
+  };
+  const handleChangeStatus = (event) => {
+    setStatus(event.target.value);
   };
 
   return (
@@ -35,7 +41,7 @@ function User(props) {
               id="demo-simple-select"
               value={role}
               label="Select Role"
-              onChange={handleChange}
+              onChange={handleChangeRole}
             >
               <MenuItem value={10}>Admin</MenuItem>
               <MenuItem value={20}>Author</MenuItem>
@@ -58,7 +64,7 @@ function User(props) {
               id="demo-simple-select"
               value={plan}
               label="Select Plan"
-              onChange={handleChange}
+              onChange={handleChangePlan}
             >
               <MenuItem value={10}>Basic</MenuItem>
               <MenuItem value={20}>Company</MenuItem>
@@ -81,7 +87,7 @@ function User(props) {
               id="demo-simple-select"
               value={status}
               label="Select Status"
-              onChange={handleChange}
+              onChange={handleChangeStatus}
             >
               <MenuItem value={10}>Pending</MenuItem>
               <MenuItem value={20}>Active</MenuItem>
