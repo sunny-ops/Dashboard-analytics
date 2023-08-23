@@ -13,7 +13,7 @@ const billings = [
   "Manual - Credit",
 ];
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 100; i++) {
   const firstNameIdx = Math.floor(Math.random() * 10);
   const lastNameIdx = Math.floor(Math.random() * 10);
   const imgIdx = Math.floor(Math.random() * 19 + 1);
