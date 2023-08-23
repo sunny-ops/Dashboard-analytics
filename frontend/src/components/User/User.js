@@ -5,17 +5,20 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Divider from "@mui/material/Divider";
+import UserList from "./UserList";
 
 function User(props) {
-  const [age, setAge] = React.useState("");
+  const [role, setRole] = React.useState("");
+  const [plan, setPlan] = React.useState("");
+  const [status, setStatus] = React.useState("");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setRole(event.target.value);
   };
 
   return (
-    <div style={{ height: "100vh" }} className="default round-border mt-3 p-3">
-      <div className="default-dark font-lg mb-3">Search Filters</div>
+    <div style={{ height: "90vh" }} className="default round-border mt-3 p-3">
+      <div className="default-dark font-md mb-3">Search Filters</div>
       <div className="d-flex flex-row gap-1 justify-content-between mb-3">
         <Box sx={{ minWidth: 120 }} className="col-lg-4 col-12">
           <FormControl
@@ -30,7 +33,7 @@ function User(props) {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={role}
               label="Select Role"
               onChange={handleChange}
             >
@@ -53,7 +56,7 @@ function User(props) {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={plan}
               label="Select Plan"
               onChange={handleChange}
             >
@@ -76,7 +79,7 @@ function User(props) {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={status}
               label="Select Status"
               onChange={handleChange}
             >
@@ -88,6 +91,7 @@ function User(props) {
         </Box>
       </div>
       <Divider />
+      <UserList />
     </div>
   );
 }
