@@ -7,6 +7,10 @@ import Chat from "../components/Chat/Chart";
 import Content from "../components/Email/Content";
 import User from "../components/User/User";
 import Invoice from "../components/Invoice/Invoice";
+import Calendar from "../components/UserInterface/Calendar";
+import Editor from "../components/UserInterface/Editor";
+import Icons from "../components/UserInterface/Icons";
+import Typography from "../components/UserInterface/Typography";
 
 const routes = [
   { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
@@ -63,6 +67,10 @@ const routes = [
   { path: "chat", element: <Chat /> },
   { path: "user", element: <User /> },
   { path: "invoice", element: <Invoice /> },
+  { path: "typography", element: <Typography /> },
+  { path: "editor", element: <Editor /> },
+  { path: "icons", element: <Icons /> },
+  // { path: "calendar", element: <Calendar /> },
 ];
 
 export default routes;

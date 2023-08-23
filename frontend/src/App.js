@@ -31,6 +31,10 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import TextFieldsIcon from "@mui/icons-material/TextFields";
+import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ListSubheader from "@mui/material/ListSubheader";
 import Collapse from "@mui/material/Collapse";
 import DraftsIcon from "@mui/icons-material/Drafts";
@@ -134,6 +138,10 @@ export default function App() {
     chat: ChatBubbleOutlineOutlinedIcon,
     user: GroupOutlinedIcon,
     invoice: ReceiptOutlinedIcon,
+    typography: TextFieldsIcon,
+    icons: InsertEmoticonIcon,
+    editor: BorderColorIcon,
+    calendar: CalendarMonthIcon,
   };
 
   function renderIcon(iconName) {
@@ -329,49 +337,43 @@ export default function App() {
               <div className="default mt-3 ms-3 font-xs">USER INTERFACE</div>
             </div>
             <List sx={{ color: "background.pen" }}>
-              {["typography", "icons", "editor", "calendar"].map(
-                (text, index) => (
-                  <ListItem
-                    key={index}
-                    disablePadding
-                    sx={{ display: "block" }}
+              {["typography", "icons", "editor"].map((text, index) => (
+                <ListItem key={index} disablePadding sx={{ display: "block" }}>
+                  <NavLink
+                    to={text}
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "active round-border nav-link"
+                        : "default round-border nav-link";
+                    }}
+                    style={{ "--color": myTheme.palette.primary.main }}
                   >
-                    <NavLink
-                      to={text}
-                      className={({ isActive }) => {
-                        return isActive
-                          ? "active round-border nav-link"
-                          : "default round-border nav-link";
+                    <ListItemButton
+                      className="round-border"
+                      sx={{
+                        minHeight: 48,
+                        justifyContent: open ? "initial" : "center",
+                        px: 2.5,
                       }}
-                      style={{ "--color": myTheme.palette.primary.main }}
                     >
-                      <ListItemButton
-                        className="round-border"
+                      <ListItemIcon
                         sx={{
-                          minHeight: 48,
-                          justifyContent: open ? "initial" : "center",
-                          px: 2.5,
+                          minWidth: 0,
+                          mr: open ? 3 : "auto",
+                          justifyContent: "center",
                         }}
                       >
-                        <ListItemIcon
-                          sx={{
-                            minWidth: 0,
-                            mr: open ? 3 : "auto",
-                            justifyContent: "center",
-                          }}
-                        >
-                          {renderIcon(text)}
-                        </ListItemIcon>
-                        <ListItemText
-                          style={{ textTransform: "capitalize" }}
-                          primary={text}
-                          sx={{ opacity: open ? 1 : 0 }}
-                        />
-                      </ListItemButton>
-                    </NavLink>
-                  </ListItem>
-                )
-              )}
+                        {renderIcon(text)}
+                      </ListItemIcon>
+                      <ListItemText
+                        style={{ textTransform: "capitalize" }}
+                        primary={text}
+                        sx={{ opacity: open ? 1 : 0 }}
+                      />
+                    </ListItemButton>
+                  </NavLink>
+                </ListItem>
+              ))}
             </List>
             <Divider />
           </div>
