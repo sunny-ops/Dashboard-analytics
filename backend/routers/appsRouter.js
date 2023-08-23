@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const EmailModel = require("../models/EmailModel");
+const UserModel = require("../models/UserModel");
 
 // import cors
 const cors = require("cors");
@@ -20,6 +21,17 @@ router.get("/apps/emails", (req, res) => {
 router.get("/apps/emails/:type", (req, res) => {
   EmailModel.find({ type: req.params.type })
     .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.get("/apps/users", (req, res) => {
+  UserModel.find()
+    .then((data) => {
+      //   console.log(data);
       res.json(data);
     })
     .catch((err) => {
