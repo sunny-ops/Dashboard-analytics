@@ -41,7 +41,7 @@ for (let i = 0; i < 100; i++) {
   const imgIdx = Math.floor(Math.random() * 19 + 1);
   const total = Math.floor(Math.random() * 5000 + 1);
   const date = formatDate(randomDate());
-  const balence = Math.floor(Math.random() * 2000 + 1);
+  const balance = Math.floor(Math.random() * 2000 + 1);
 
   const obj = {
     id: id,
@@ -50,7 +50,7 @@ for (let i = 0; i < 100; i++) {
     avatarURL: `${imgIdx}.png`,
     total: total,
     date: date,
-    balence: balence,
+    balance: balance,
   };
   invoices.push(obj);
 }
