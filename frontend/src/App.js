@@ -243,69 +243,77 @@ export default function App() {
               <ListItemText primary="Dashboards" />
               {openNest ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <Collapse in={openNest} timeout="auto" unmountOnExit>
-              <List component="div" disablePadding>
-                <NavLink
-                  to="dashboards/analytics"
-                  className={({ isActive }) => {
-                    return isActive
-                      ? "active round-border nav-link"
-                      : "default round-border nav-link";
-                  }}
-                  style={{ "--color": myTheme.palette.primary.main }}
-                >
-                  <ListItemButton
-                    className="round-border"
-                    sx={{
-                      pl: 4,
+            {open ? (
+              <Collapse in={openNest} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  <NavLink
+                    to="dashboards/analytics"
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "active round-border nav-link"
+                        : "default round-border nav-link";
                     }}
+                    style={{ "--color": myTheme.palette.primary.main }}
                   >
-                    <ListItemIcon style={{ color: "inherit" }}>
-                      <FiberManualRecordIcon fontSize="xs" />
-                    </ListItemIcon>
-                    <ListItemText primary="Analytics" />
-                  </ListItemButton>
-                </NavLink>
+                    <ListItemButton
+                      className="round-border"
+                      sx={{
+                        pl: 4,
+                      }}
+                    >
+                      <ListItemIcon style={{ color: "inherit" }}>
+                        <FiberManualRecordIcon fontSize="xs" />
+                      </ListItemIcon>
+                      <ListItemText primary="Analytics" />
+                    </ListItemButton>
+                  </NavLink>
 
-                <NavLink
-                  to="dashboards/crm"
-                  className={({ isActive }) => {
-                    return isActive
-                      ? "active round-border nav-link"
-                      : "default round-border nav-link";
-                  }}
-                  style={{ "--color": myTheme.palette.primary.main }}
-                >
-                  <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                    <ListItemIcon style={{ color: "inherit" }}>
-                      <FiberManualRecordIcon fontSize="xs" />
-                    </ListItemIcon>
-                    <ListItemText primary="CRM" />
-                  </ListItemButton>
-                </NavLink>
-                <NavLink
-                  to="dashboards/ecommerce"
-                  className={({ isActive }) => {
-                    return isActive
-                      ? "active round-border nav-link"
-                      : "default round-border nav-link";
-                  }}
-                  style={{ "--color": myTheme.palette.primary.main }}
-                >
-                  <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                    <ListItemIcon style={{ color: "inherit" }}>
-                      <FiberManualRecordIcon fontSize="xs" />
-                    </ListItemIcon>
-                    <ListItemText primary="Ecommerce" />
-                  </ListItemButton>
-                </NavLink>
-              </List>
-            </Collapse>
+                  <NavLink
+                    to="dashboards/crm"
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "active round-border nav-link"
+                        : "default round-border nav-link";
+                    }}
+                    style={{ "--color": myTheme.palette.primary.main }}
+                  >
+                    <ListItemButton className="round-border" sx={{ pl: 4 }}>
+                      <ListItemIcon style={{ color: "inherit" }}>
+                        <FiberManualRecordIcon fontSize="xs" />
+                      </ListItemIcon>
+                      <ListItemText primary="CRM" />
+                    </ListItemButton>
+                  </NavLink>
+                  <NavLink
+                    to="dashboards/ecommerce"
+                    className={({ isActive }) => {
+                      return isActive
+                        ? "active round-border nav-link"
+                        : "default round-border nav-link";
+                    }}
+                    style={{ "--color": myTheme.palette.primary.main }}
+                  >
+                    <ListItemButton className="round-border" sx={{ pl: 4 }}>
+                      <ListItemIcon style={{ color: "inherit" }}>
+                        <FiberManualRecordIcon fontSize="xs" />
+                      </ListItemIcon>
+                      <ListItemText primary="Ecommerce" />
+                    </ListItemButton>
+                  </NavLink>
+                </List>
+              </Collapse>
+            ) : (
+              <></>
+            )}
           </List>
           <Divider />
           <div className="px-2">
             <div>
-              <div className="default mt-3 ms-3 font-xs">APPS & PAGES</div>
+              {open ? (
+                <div className="default mt-3 ms-3 font-xs">APPS & PAGES</div>
+              ) : (
+                <></>
+              )}
             </div>
             <List sx={{ color: "background.pen" }}>
               <ListItem disablePadding sx={{ display: "block" }}>
@@ -387,7 +395,11 @@ export default function App() {
           </div>
           <div className="px-2">
             <div>
-              <div className="default mt-3 ms-3 font-xs">USER INTERFACE</div>
+              {open ? (
+                <div className="default mt-3 ms-3 font-xs">USER INTERFACE</div>
+              ) : (
+                <></>
+              )}
             </div>
             <List sx={{ color: "background.pen" }}>
               {["typography", "icons", "editor"].map((text, index) => (
@@ -432,7 +444,11 @@ export default function App() {
           </div>
           <div className="px-2">
             <div>
-              <div className="default mt-3 ms-3 font-xs">CHARTS</div>
+              {open ? (
+                <div className="default mt-3 ms-3 font-xs">CHARTS</div>
+              ) : (
+                <></>
+              )}
             </div>
             <List sx={{ color: "background.pen" }}>
               {["line", "bar", "area", "pie", "polar", "radar", "bubble"].map(

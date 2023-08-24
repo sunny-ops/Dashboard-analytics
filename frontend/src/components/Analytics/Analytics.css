@@ -44,6 +44,10 @@
     rgba(50, 71, 92, 0.12) 0px 3px 14px 2px;
 }
 
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
 .apexcharts-ycrosshairs-hidden {
   opacity: 0;
 }
@@ -75,6 +79,11 @@
 .income {
   background-image: url(../../images/svgs/income.svg);
   height: 220px;
+}
+
+.total_orders {
+  background-image: url(../../images/svgs/total_orders.svg);
+  width: 100px;
 }
 
 /* Button:hover {

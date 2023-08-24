@@ -23,6 +23,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Browser from "./Browser";
+import { Divider } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -38,10 +39,13 @@ function Analytics(props) {
   const [transitions, setTransitions] = useState([]);
   const [orders, setOrders] = useState([]);
   const [incomeContent, setIncomeContent] = useState([
-    "INCOME",
-    "EXPENSE",
-    "PROFIT",
+    "income",
+    "expense",
+    "profit",
   ]);
+  const total = ["$459.1k", "$316.5k", "$147.9k"];
+  const less = ["28k", "60k", "36k"];
+  const imgs = ["paypal.png", "wallet.png", "chart.png"];
   const [incomeIdx, setIncomeIdx] = useState(0);
   const [items, setItems] = useState([]);
 
@@ -311,7 +315,7 @@ function Analytics(props) {
       <Box sx={{ flexGrow: 1 }} className="mt-4 default-color">
         <Grid container spacing={2}>
           <Grid item className="col-lg-4 col-12">
-            <Item className="box-padding">
+            <Item className="box-padding" style={{ height: "464px" }}>
               <div>
                 <div className="d-flex flex-row justify-content-between">
                   <div className="default-dark font-lg">Order Statistics</div>
@@ -337,11 +341,12 @@ function Analytics(props) {
                   </DropdownButton>
                 </div>
                 <div className="default font-xs mb-4">42.82k Total Sales</div>
-                <div className="d-flex flex-row">
+                <div className="d-flex flex-row justify-content-between align-items-center">
                   <div>
                     <div className="default-dark font-lg">8,258</div>
                     <div className="default font-sm mb-4">Total Orders</div>
                   </div>
+                  <div className="order total_orders me-3"></div>
                 </div>
                 <ul style={{ paddingLeft: "0" }}>
                   {orders.map((v, id) => {
@@ -357,10 +362,10 @@ function Analytics(props) {
                             className="smallIcon"
                           ></img>
                           <div className="d-flex flex-column">
-                            <div className="font-sm default-default">
-                              {v.name}
+                            <div className="font-sm default">{v.name}</div>
+                            <div className="font-sm default-dark">
+                              {v.usage}
                             </div>
-                            <div className="font-sm default">{v.usage}</div>
                           </div>
                         </div>
                         <div className="d-flex flex-row gap-3 align-items-center">
@@ -377,8 +382,8 @@ function Analytics(props) {
             </Item>
           </Grid>
           <Grid item className="col-lg-4 col-12">
-            <Item className="box-padding">
-              <div className="mb-5">
+            <Item className="box-padding" style={{ height: "464px" }}>
+              <div className="mb-3">
                 {incomeContent.map((v, id) => {
                   return (
                     <Button
@@ -403,24 +408,35 @@ function Analytics(props) {
                   );
                 })}
               </div>
-              <div className="d-flex flex-row gap-3 align-items-center mb-3">
+              <Divider />
+              <div className="d-flex flex-row gap-3 align-items-center mb-3 mt-2 p-2">
                 <img
                   alt="Paypal"
-                  src={require(`../../images/cards/paypal.png`)}
+                  src={require(`../../images/cards/${imgs[incomeIdx]}`)}
                   className="smallIcon"
                 ></img>
                 <div className="d-flex flex-column">
-                  <div className="font-sm default-default">Total Income</div>
-                  <div className="font-sm default">$459.1k</div>
+                  <div
+                    className="font-sm default"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Total {incomeContent[incomeIdx]}
+                  </div>
+                  <div className="font-sm default-dark">{total[incomeIdx]}</div>
                 </div>
               </div>
               <div className="order income mb-2"></div>
               <div className="d-flex flex-row justify-content-center gap-2">
-                <img src="" alt="income"></img>
+                {/* <img src="" alt="income"></img> */}
                 <div>
-                  <div className="default-dark font-sm">Income this week</div>
+                  <div
+                    className="default-dark font-sm"
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    {incomeContent[incomeIdx]} this week
+                  </div>
                   <div className="default font-sm">
-                    $39k less than last week
+                    {less[incomeIdx]} less than last week
                   </div>
                 </div>
               </div>
@@ -465,8 +481,8 @@ function Analytics(props) {
                           className="smallIcon"
                         ></img>
                         <div className="d-flex flex-column">
-                          <div className="font-sm default-dart">{v.name}</div>
-                          <div className="font-sm default">{v.usage}</div>
+                          <div className="font-sm default">{v.name}</div>
+                          <div className="font-sm default-dark">{v.usage}</div>
                         </div>
                       </div>
                       <div className="d-flex flex-row gap-3 align-items-center">
