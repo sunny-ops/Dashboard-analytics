@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const name = require("../jsons/name.json");
 
 let invoices = [];
+const statuses = ["Sent", "Paid", "Draft", "Downloaded"];
 
 function randomDate() {
   const start = new Date("2023-01-01");
@@ -28,6 +29,7 @@ function formatDate(date) {
     "Nov",
     "Dec",
   ];
+
   const month = monthAbbreviations[date.getMonth()]; // Get the month abbreviation
   const day = date.getDate();
   const year = date.getFullYear();
@@ -42,6 +44,7 @@ for (let i = 0; i < 100; i++) {
   const total = Math.floor(Math.random() * 5000 + 1);
   const date = formatDate(randomDate());
   const balance = Math.floor(Math.random() * 2000 + 1);
+  const statusIdx = Math.floor(Math.random() * 4);
 
   const obj = {
     id: id,
@@ -51,6 +54,7 @@ for (let i = 0; i < 100; i++) {
     total: total,
     date: date,
     balance: balance,
+    status: statuses[statusIdx],
   };
   invoices.push(obj);
 }

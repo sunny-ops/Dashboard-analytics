@@ -106,15 +106,6 @@ function UserList(props) {
   const { role, plan, status } = props;
   console.log(role, plan, status);
   useEffect(() => {
-    //     axios
-    //       .get(`http://127.0.0.1:8080/api/apps/users/`)
-    //       .then((res) => {
-    //         setRows(res.data);
-    //       })
-    //       .catch((err) => {
-    //         console.log(err);
-    //       });
-    //   }, []);
     axios
       .get(
         `http://127.0.0.1:8080/api/apps/users?role=${role}&plan=${plan}&status=${status}`

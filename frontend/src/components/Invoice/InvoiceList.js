@@ -9,7 +9,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const columns = [
-  { field: "id", headerName: "# id", width: 100 },
+  { field: "id", headerName: "# id", width: 70 },
+  { field: "status", headerName: "STATUS", width: 100 },
   {
     field: "avatar",
     headerName: "",
@@ -37,7 +38,7 @@ const columns = [
     headerName: "CLIENT",
     description: "This column has a value getter and is not sortable.",
     sortable: false,
-    width: 300,
+    width: 230,
     valueGetter: (params) =>
       `${params.row.firstName || ""} ${params.row.lastName || ""}`,
   },
@@ -92,17 +93,19 @@ const columns = [
 // ];
 
 function InvoiceList(props) {
+  const status = props.status;
+
   const [rows, setRows] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8080/api/apps/invoices/`)
+      .get(`http://127.0.0.1:8080/api/apps/invoices?status=${status}`)
       .then((res) => {
         setRows(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [status]);
   return (
     <div
       style={{ height: 800, width: "100%", color: " rgba(50, 71, 92, 0.6)" }}

@@ -41,10 +41,11 @@ function Invoice(props) {
               label="Select Status"
               onChange={handleChangeStatus}
             >
-              <MenuItem value={10}>Sent</MenuItem>
-              <MenuItem value={20}>Paid</MenuItem>
-              <MenuItem value={30}>Draft</MenuItem>
-              <MenuItem value={30}>Downloaded</MenuItem>
+              <MenuItem value={""}>Select Status</MenuItem>
+              <MenuItem value={"Sent"}>Sent</MenuItem>
+              <MenuItem value={"Paid"}>Paid</MenuItem>
+              <MenuItem value={"Draft"}>Draft</MenuItem>
+              <MenuItem value={"Downloaded"}>Downloaded</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -57,7 +58,7 @@ function Invoice(props) {
         </div>
       </div>
       <Divider />
-      <InvoiceList />
+      <InvoiceList status={status} />
     </div>
   );
 }

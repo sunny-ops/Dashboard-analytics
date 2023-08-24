@@ -7,6 +7,7 @@ const InvoiceSchema = new mongoose.Schema({
   total: Number,
   date: String,
   balance: Number,
+  status: String,
 });
 const InvoiceModel = mongoose.model("invoices", InvoiceSchema);
 module.exports = InvoiceModel;
