@@ -29,6 +29,18 @@ router.get("/apps/emails/:type", (req, res) => {
     });
 });
 
+router.get("/apps/emails/:type/:name", (req, res) => {
+  const name = req.params.name;
+  const regex = new RegExp(name, "i");
+  EmailModel.find({ type: req.params.type, firstName: regex })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 router.get("/apps/users", (req, res) => {
   UserModel.find()
     .then((data) => {

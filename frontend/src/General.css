@@ -44,3 +44,9 @@ a {
   height: 40px;
   border-radius: 50px;
 }
+
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
