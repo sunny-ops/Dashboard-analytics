@@ -54,27 +54,44 @@ router.get("/apps/emails/:type/:name", (req, res) => {
 
 router.get("/apps/users", (req, res) => {
   const { role, plan, status } = req.query;
-  console.log("backend", role, plan, status);
-  if (!role && !plan && !status) {
-    console.log("undefined");
-    UserModel.find({})
-      .then((data) => {
-        //   console.log(data);
-        res.json(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    return;
-  }
+  // console.log("role!=undefined", !role);
+  // console.log("backend", role, plan, status);
+  // if (!role && !plan && !status) {
+  //   console.log("undefined");
+  //   UserModel.find({})
+  //     .then((data) => {
+  //       //   console.log(data);
+  //       res.json(data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   return;
+  // }
 
-  const regexRole = new RegExp(role, "i");
-  const regexPlan = new RegExp(plan, "i");
-  const regexStatus = new RegExp(status, "i");
-  UserModel.find({ role: role })
+  UserModel.find()
     .then((data) => {
       //   console.log(data);
-      res.json(data);
+      var filteredData = data;
+      if (role != "") {
+        // console.log("role", role);
+        filteredData = data.filter(
+          (data) =>
+            (!role || data.role === role) &&
+            (!plan || data.plan === plan) &&
+            (!status || data.status === status)
+        );
+      }
+      // if (plan != "") {
+      //   console.log("plan", plan);
+      //   filteredData = data.filter((data) => data.plan === plan);
+      // }
+      // if (status != "") {
+      //   console.log("status", status);
+      //   filteredData = data.filter((data) => data.status === status);
+      // }
+      res.json(filteredData);
+      // res.json(data);
     })
     .catch((err) => {
       console.log(err);
