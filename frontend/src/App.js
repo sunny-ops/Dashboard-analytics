@@ -236,7 +236,7 @@ export default function App() {
             }
           >
             <ListItemButton className="round-border" onClick={handleClick}>
-              <ListItemIcon>
+              <ListItemIcon style={{ color: "inherit" }}>
                 <HomeIcon />
               </ListItemIcon>
               <ListItemText primary="Dashboards" />
@@ -307,7 +307,43 @@ export default function App() {
               <div className="default mt-3 ms-3 font-xs">APPS & PAGES</div>
             </div>
             <List sx={{ color: "background.pen" }}>
-              {["email", "chat", "user", "invoice"].map((text, index) => (
+              <ListItem disablePadding sx={{ display: "block" }}>
+                <NavLink
+                  to={"email/inbox"}
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
+                  }}
+                  style={{ "--color": myTheme.palette.primary.main }}
+                >
+                  <ListItemButton
+                    className="round-border"
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5,
+                    }}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                        color: "inherit",
+                      }}
+                    >
+                      {renderIcon("email")}
+                    </ListItemIcon>
+                    <ListItemText
+                      style={{ textTransform: "capitalize" }}
+                      primary={"email"}
+                      sx={{ opacity: open ? 1 : 0 }}
+                    />
+                  </ListItemButton>
+                </NavLink>
+              </ListItem>
+              {["chat", "user", "invoice"].map((text, index) => (
                 <ListItem key={index} disablePadding sx={{ display: "block" }}>
                   <NavLink
                     to={text}
@@ -331,6 +367,7 @@ export default function App() {
                           minWidth: 0,
                           mr: open ? 3 : "auto",
                           justifyContent: "center",
+                          color: "inherit",
                         }}
                       >
                         {renderIcon(text)}
@@ -426,6 +463,7 @@ export default function App() {
                             minWidth: 0,
                             mr: open ? 3 : "auto",
                             justifyContent: "center",
+                            color: "inherit",
                           }}
                         >
                           {renderIcon(text)}

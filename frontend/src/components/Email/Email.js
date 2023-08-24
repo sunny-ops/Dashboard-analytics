@@ -127,6 +127,7 @@ function Email(props) {
 
       <div className="col-9">
         {/* <Content value="inbox" /> */}
+
         <Outlet />
       </div>
     </div>
