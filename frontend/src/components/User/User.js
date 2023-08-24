@@ -42,6 +42,7 @@ function User(props) {
               value={role}
               label="Select Role"
               onChange={handleChangeRole}
+              style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
               <MenuItem value={10}>Admin</MenuItem>
               <MenuItem value={20}>Author</MenuItem>
@@ -65,6 +66,7 @@ function User(props) {
               value={plan}
               label="Select Plan"
               onChange={handleChangePlan}
+              style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
               <MenuItem value={10}>Basic</MenuItem>
               <MenuItem value={20}>Company</MenuItem>
@@ -88,6 +90,7 @@ function User(props) {
               value={status}
               label="Select Status"
               onChange={handleChangeStatus}
+              style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
               <MenuItem value={10}>Pending</MenuItem>
               <MenuItem value={20}>Active</MenuItem>
