@@ -9,6 +9,9 @@ import "../../General.css";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import VideoChatOutlinedIcon from "@mui/icons-material/VideoChatOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import KeyboardVoiceOutlinedIcon from "@mui/icons-material/KeyboardVoiceOutlined";
+import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
+
 import axios from "axios";
 
 function Chat(props) {
@@ -82,29 +85,38 @@ function Chat(props) {
         <div className=" mb-3 d-flex flex-column">
           {items.map((v, id) => {
             return (
-              <div
-                key={id}
-                style={{
-                  color:
-                    chatIdx === id ? "white" : theme.palette.background.pen,
-                  backgroundColor:
-                    chatIdx === id ? theme.palette.primary.main : "white",
-                }}
-                onClick={() => {
-                  chatBtn(id);
-                }}
-                className="me-2 d-flex flex-row p-2 round-border"
-              >
-                <img
-                  src={require(`../../images/avatars/${v.avatarURL}`)}
-                  className="portrait-sm me-3"
-                />
-                <div className="d-flex flex-column">
-                  <div>{v.firstName}</div>
-                  <div>{v.lastName}</div>
+              <>
+                {id === 3 ? (
+                  <div className="font-lg mb-3" style={{ color: themeColor }}>
+                    Contacts
+                  </div>
+                ) : (
+                  <></>
+                )}
+                <div
+                  key={id}
+                  style={{
+                    color:
+                      chatIdx === id ? "white" : theme.palette.background.pen,
+                    backgroundColor:
+                      chatIdx === id ? theme.palette.primary.main : "white",
+                  }}
+                  onClick={() => {
+                    chatBtn(id);
+                  }}
+                  className="me-2 d-flex flex-row p-2 round-border"
+                >
+                  <img
+                    src={require(`../../images/avatars/${v.avatarURL}`)}
+                    className="portrait-sm me-3"
+                  />
+                  <div className="d-flex flex-column">
+                    <div>{v.firstName}</div>
+                    <div>{v.lastName}</div>
+                  </div>
+                  <div className="flex-grow-1 text-end">{v.time}</div>
                 </div>
-                <div className="flex-grow-1 text-end">{v.time}</div>
-              </div>
+              </>
             );
           })}
         </div>
@@ -134,6 +146,26 @@ function Chat(props) {
         ) : (
           <></>
         )}
+        <div style={{ height: "80%" }}></div>
+        <div
+          className="d-flex flex-row mt-5 mb-3 py-2 align-items-center round-border ps-3"
+          style={{ width: "100%", border: "1px solid rgba(224, 224, 224, 1)" }}
+        >
+          <input
+            placeholder="Type your message here ..."
+            className="flex-grow-1 font-sm default"
+            style={{ border: "none" }}
+          ></input>
+          <KeyboardVoiceOutlinedIcon className="me-3" />
+          <AttachFileOutlinedIcon className="me-3" />
+          <Button
+            variant="contained"
+            style={{ color: "white" }}
+            className="me-3"
+          >
+            SEND
+          </Button>
+        </div>
       </div>
     </div>
   );
