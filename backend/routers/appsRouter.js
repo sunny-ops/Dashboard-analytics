@@ -41,8 +41,37 @@ router.get("/apps/emails/:type/:name", (req, res) => {
     });
 });
 
+// router.get("/apps/users", (req, res) => {
+//   UserModel.find()
+//     .then((data) => {
+//       //   console.log(data);
+//       res.json(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
+
 router.get("/apps/users", (req, res) => {
-  UserModel.find()
+  const { role, plan, status } = req.query;
+  console.log("backend", role, plan, status);
+  if (!role && !plan && !status) {
+    console.log("undefined");
+    UserModel.find({})
+      .then((data) => {
+        //   console.log(data);
+        res.json(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    return;
+  }
+
+  const regexRole = new RegExp(role, "i");
+  const regexPlan = new RegExp(plan, "i");
+  const regexStatus = new RegExp(status, "i");
+  UserModel.find({ role: role })
     .then((data) => {
       //   console.log(data);
       res.json(data);
@@ -51,6 +80,24 @@ router.get("/apps/users", (req, res) => {
       console.log(err);
     });
 });
+
+// router.get("/apps/users/:role?/:plan?/:status?", (req, res) => {
+//   const role = req.params.role;
+//   const plan = req.params.plan;
+//   const status = req.params.status;
+//   const regexRole = new RegExp(role, "i");
+//   const regexPlan = new RegExp(plan, "i");
+//   const regexStatus = new RegExp(status, "i");
+//   console.log("role", role);
+//   UserModel.find({ role: regexRole, plan: regexPlan, status: regexStatus })
+//     .then((data) => {
+//       //   console.log(data);
+//       res.json(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
 
 router.get("/apps/invoices", (req, res) => {
   InvoiceModel.find()

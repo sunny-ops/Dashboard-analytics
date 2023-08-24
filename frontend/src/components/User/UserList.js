@@ -102,16 +102,31 @@ const columns = [
 
 function UserList(props) {
   const [rows, setRows] = useState([]);
+  //   console.log(props.role, props.plan, props.status);
+  const { role, plan, status } = props;
+  console.log(role, plan, status);
   useEffect(() => {
+    //     axios
+    //       .get(`http://127.0.0.1:8080/api/apps/users/`)
+    //       .then((res) => {
+    //         setRows(res.data);
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //       });
+    //   }, []);
     axios
-      .get(`http://127.0.0.1:8080/api/apps/users/`)
+      .get(
+        `http://127.0.0.1:8080/api/apps/users?role=${role}&plan=${plan}&status=${status}`
+        // `http://127.0.0.1:8080/api/apps/users?role=Admin&plan=Team&status=Active`
+      )
       .then((res) => {
         setRows(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [role, plan, status]);
   //   console.log(rows);
 
   return (

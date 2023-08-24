@@ -44,9 +44,9 @@ function User(props) {
               onChange={handleChangeRole}
               style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
-              <MenuItem value={10}>Admin</MenuItem>
-              <MenuItem value={20}>Author</MenuItem>
-              <MenuItem value={30}>Subscriber</MenuItem>
+              <MenuItem value={"Admin"}>Admin</MenuItem>
+              <MenuItem value={"Author"}>Author</MenuItem>
+              <MenuItem value={"Subscriber"}>Subscriber</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -68,9 +68,9 @@ function User(props) {
               onChange={handleChangePlan}
               style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
-              <MenuItem value={10}>Basic</MenuItem>
-              <MenuItem value={20}>Company</MenuItem>
-              <MenuItem value={30}>Team</MenuItem>
+              <MenuItem value={"Basic"}>Basic</MenuItem>
+              <MenuItem value={"Company"}>Company</MenuItem>
+              <MenuItem value={"Team"}>Team</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -92,15 +92,15 @@ function User(props) {
               onChange={handleChangeStatus}
               style={{ color: "rgba(50, 71, 92, 0.87)" }}
             >
-              <MenuItem value={10}>Pending</MenuItem>
-              <MenuItem value={20}>Active</MenuItem>
-              <MenuItem value={30}>Inactive</MenuItem>
+              <MenuItem value={"Pending"}>Pending</MenuItem>
+              <MenuItem value={"Active"}>Active</MenuItem>
+              <MenuItem value={"Inactive"}>Inactive</MenuItem>
             </Select>
           </FormControl>
         </Box>
       </div>
       <Divider />
-      <UserList />
+      <UserList role={role} plan={plan} status={status} />
     </div>
   );
 }
