@@ -181,7 +181,7 @@ export default function App() {
     setOpen(false);
   };
   const element = useRoutes(routes);
-
+  console.log("theme.direction", theme.direction);
   return (
     <ThemeProvider theme={myTheme}>
       <Box sx={{ display: "flex" }}>
@@ -194,6 +194,7 @@ export default function App() {
         >
           <Toolbar>
             <IconButton
+              style={{ background: myTheme.palette.primary.main }}
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
@@ -203,7 +204,7 @@ export default function App() {
                 ...(open && { display: "none" }),
               }}
             >
-              <MenuIcon />
+              <MenuIcon style={{ color: myTheme.palette.background.pen }} />
             </IconButton>
           </Toolbar>
         </AppBar>
