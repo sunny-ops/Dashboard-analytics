@@ -2,7 +2,7 @@ import React from "react";
 
 function LineChart(props) {
   return (
-    <div className="default round-border mt-3 p-5" style={{ height: "80vh" }}>
+    <div className="default round-border mt-3 p-5" style={{ height: "90vh" }}>
       <h2>Balance</h2>
       <div className="mb-5">Commercial networks & enterprises</div>
 

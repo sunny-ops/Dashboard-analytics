@@ -16,6 +16,12 @@ import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
 
 import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
@@ -40,15 +46,16 @@ function Navbar(props) {
             id="dropdown-basic"
             style={{ backgroundColor: "transparent", border: "none" }}
           >
-            <DarkModeOutlinedIcon className="default" fontSize="medium" />
+            <SettingsOutlinedIcon className="default" fontSize="medium" />
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="p-3" align="end">
             <div className="default font-md mb-3" style={{ fontWeight: "600" }}>
-              Primary Color
+              Theme Customizer
             </div>
             <Divider />
-            <div className="d-flex flex-row gap-2 mt-3">
+            <div className="default-color mt-2">Primary Color</div>
+            <div className="d-flex flex-row gap-2 mt-2">
               <div
                 className="color-div blue"
                 onClick={() => {
@@ -93,7 +100,61 @@ function Navbar(props) {
               ></div>
             </div>
 
-            <Divider />
+            <FormControl className="mt-2">
+              <FormLabel
+                id="demo-row-radio-buttons-group-label"
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+              >
+                Mode
+              </FormLabel>
+              <RadioGroup
+                row
+                aria-labelledby="demo-row-radio-buttons-group-label"
+                name="row-radio-buttons-group"
+                className="default-color"
+              >
+                <FormControlLabel
+                  value="light"
+                  control={<Radio />}
+                  label="Light"
+                />
+                <FormControlLabel
+                  value="dark"
+                  control={<Radio />}
+                  label="Dark"
+                />
+                <FormControlLabel
+                  value="Semi-Dark"
+                  control={<Radio />}
+                  label="Semi Dark"
+                />
+              </RadioGroup>
+            </FormControl>
+            <FormControl className="mt-2">
+              <FormLabel
+                id="demo-row-radio-buttons-group-label"
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+              >
+                Skin
+              </FormLabel>
+              <RadioGroup
+                row
+                aria-labelledby="demo-row-radio-buttons-group-label"
+                name="row-radio-buttons-group"
+                className="default-color"
+              >
+                <FormControlLabel
+                  value="Default"
+                  control={<Radio />}
+                  label="Default"
+                />
+                <FormControlLabel
+                  value="Board"
+                  control={<Radio />}
+                  label="Board"
+                />
+              </RadioGroup>
+            </FormControl>
           </Dropdown.Menu>
         </Dropdown>
 

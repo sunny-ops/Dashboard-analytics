@@ -3,7 +3,7 @@ import "./chart.css";
 
 function BarChart(props) {
   return (
-    <div className="default round-border mt-3 p-5" style={{ height: "80vh" }}>
+    <div className="default round-border mt-3 p-5" style={{ height: "90vh" }}>
       <h2>Line Chart</h2>
       <div className="mb-5">Data Science</div>
 

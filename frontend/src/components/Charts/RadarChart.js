@@ -5,7 +5,7 @@ function RadarChart(props) {
   return (
     <div
       className="default round-border mt-3 p-5"
-      style={{ height: "80vh", overflow: "hidden" }}
+      style={{ height: "90vh", overflow: "hidden" }}
     >
       <h2>Mobile Comparison</h2>
       <div className="mb-3">Commercial networks & enterprises</div>
