@@ -4,7 +4,8 @@
 }
 
 .active {
-  background-color: rgba(3, 195, 236, 0.16) !important;
+  /* background-color: rgba(3, 195, 236, 0.16) !important; */
+  background-color: var(--bgColor) !important;
   color: var(--color) !important;
 }
 

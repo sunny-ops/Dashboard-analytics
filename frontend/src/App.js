@@ -334,7 +334,10 @@ export default function App() {
                       ? "active round-border nav-link"
                       : "default round-border nav-link";
                   }}
-                  style={{ "--color": myTheme.palette.primary.main }}
+                  style={{
+                    "--color": myTheme.palette.primary.main,
+                    "--bgColor": myTheme.palette.primary.bgMain,
+                  }}
                 >
                   <ListItemButton
                     className="round-border"
@@ -382,7 +385,10 @@ export default function App() {
                       ? "active round-border nav-link"
                       : "default round-border nav-link";
                   }}
-                  style={{ "--color": myTheme.palette.primary.main }}
+                  style={{
+                    "--color": myTheme.palette.primary.main,
+                    "--bgColor": myTheme.palette.primary.bgMain,
+                  }}
                 >
                   <ListItemButton
                     className="round-border"
@@ -419,7 +425,10 @@ export default function App() {
                         ? "active round-border nav-link"
                         : "default round-border nav-link";
                     }}
-                    style={{ "--color": myTheme.palette.primary.main }}
+                    style={{
+                      "--color": myTheme.palette.primary.main,
+                      "--bgColor": myTheme.palette.primary.bgMain,
+                    }}
                   >
                     <ListItemButton
                       className="round-border"
@@ -469,7 +478,10 @@ export default function App() {
                         ? "active round-border nav-link"
                         : "default round-border nav-link";
                     }}
-                    style={{ "--color": myTheme.palette.primary.main }}
+                    style={{
+                      "--color": myTheme.palette.primary.main,
+                      "--bgColor": myTheme.palette.primary.bgMain,
+                    }}
                   >
                     <ListItemButton
                       className="round-border"
@@ -523,7 +535,10 @@ export default function App() {
                           ? "active round-border nav-link"
                           : "default round-border nav-link";
                       }}
-                      style={{ "--color": myTheme.palette.primary.main }}
+                      style={{
+                        "--color": myTheme.palette.primary.main,
+                        "--bgColor": myTheme.palette.primary.bgMain,
+                      }}
                     >
                       <ListItemButton
                         className="round-border"

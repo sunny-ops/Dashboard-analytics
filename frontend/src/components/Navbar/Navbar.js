@@ -64,10 +64,33 @@ function Navbar(props) {
                   );
                 }}
               ></div>
-              <div className="color-div green"></div>
-              <div className="color-div red"></div>
-              <div className="color-div orange"></div>
-              <div className="color-div purple"></div>
+              <div
+                className="color-div green"
+                onClick={() => {
+                  props.change("rgb(113, 221, 55)", "rgba(113, 221, 55, 0.16)");
+                }}
+              ></div>
+              <div
+                className="color-div red"
+                onClick={() => {
+                  props.change("rgb(255, 62, 29)", "rgba(255, 62, 29, 0.16)");
+                }}
+              ></div>
+              <div
+                className="color-div orange"
+                onClick={() => {
+                  props.change("rgb(255, 171, 0)", "rgba(255, 171, 0, 0.16)");
+                }}
+              ></div>
+              <div
+                className="color-div purple"
+                onClick={() => {
+                  props.change(
+                    "rgb(105, 108, 255)",
+                    "rgba(105, 108, 255, 0.16)"
+                  );
+                }}
+              ></div>
             </div>
 
             <Divider />
