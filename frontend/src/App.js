@@ -223,7 +223,7 @@ export default function App() {
             </IconButton>
           </DrawerHeader>
           <Divider />
-          <List
+          {/* <List
             sx={{
               width: "100%",
               maxWidth: 360,
@@ -309,9 +309,54 @@ export default function App() {
             ) : (
               <></>
             )}
-          </List>
-          <Divider />
+          </List> */}
+
           <div className="px-2">
+            <List sx={{ color: "background.pen" }}>
+              <ListItem
+                disablePadding
+                sx={{ display: "block" }}
+                className="pb-2"
+              >
+                <NavLink
+                  to={"dashboards/analytics"}
+                  className={({ isActive }) => {
+                    return isActive
+                      ? "active round-border nav-link"
+                      : "default round-border nav-link";
+                  }}
+                  style={{ "--color": myTheme.palette.primary.main }}
+                >
+                  <ListItemButton
+                    className="round-border"
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5,
+                    }}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center",
+                        color: "inherit",
+                      }}
+                    >
+                      {/* {renderIcon("email")} */}
+                      <HomeIcon />
+                    </ListItemIcon>
+                    <ListItemText
+                      style={{ textTransform: "capitalize" }}
+                      primary={"Dashboard"}
+                      sx={{ opacity: open ? 1 : 0 }}
+                    />
+                  </ListItemButton>
+                </NavLink>
+              </ListItem>
+              <Divider />
+            </List>
+
             <div>
               {open ? (
                 <div className="default mt-3 ms-3 font-xs">APPS & PAGES</div>
