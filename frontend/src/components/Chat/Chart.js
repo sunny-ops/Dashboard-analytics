@@ -33,7 +33,7 @@ function Chat(props) {
   }, []);
 
   console.log("chat", chatContent);
-  const items = chatContent.slice(0, 12);
+  const items = chatContent.slice(0, 11);
   console.log(items);
 
   const chatBtn = (id) => {
@@ -51,7 +51,7 @@ function Chat(props) {
   return (
     <div
       className="default round-border mt-3 d-flex flex-row"
-      style={{ height: "100vh" }}
+      style={{ height: "90vh" }}
     >
       <div
         className="col-4 box-padding"

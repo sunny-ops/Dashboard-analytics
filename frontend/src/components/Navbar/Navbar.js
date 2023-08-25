@@ -13,6 +13,8 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 
 import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
@@ -40,8 +42,17 @@ function Navbar(props) {
             <GridViewOutlinedIcon className="default" fontSize="medium" />
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="p-3" style={{ width: "300px" }}>
-            <div className="mb-3 default-dark font-md ms-2">Shortcuts</div>
+          <Dropdown.Menu
+            className="py-3"
+            style={{ width: "300px" }}
+            align="end"
+          >
+            <div
+              className="mb-3 default font-md ms-2 ps-3"
+              style={{ fontWeight: "600" }}
+            >
+              Shortcuts
+            </div>
             <Divider />
 
             <div className="d-flex flex-row">
@@ -85,10 +96,13 @@ function Navbar(props) {
                 <NavLink to="user" style={{ color: "inherit" }}>
                   <div
                     className="box-padding d-flex flex-column justify-content-center align-items-center"
-                    style={{ borderRight: "1px solid rgba(0, 0, 0, 0.12)" }}
+                    style={{
+                      borderRight: "1px solid rgba(0, 0, 0, 0.12)",
+                      borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
+                    }}
                   >
                     <div className="icon-background d-flex justify-content-center align-items-center mb-2">
-                      <MailOutlineIcon />
+                      <PeopleAltOutlinedIcon />
                     </div>
                     <div>User</div>
                   </div>
@@ -98,12 +112,14 @@ function Navbar(props) {
               <Dropdown.Item
                 style={{ color: "rgba(50, 71, 92, 0.6)" }}
                 href="#"
-                className="p-0 py-2"
               >
                 <NavLink to="invoice" style={{ color: "inherit" }}>
-                  <div className="box-padding d-flex flex-column justify-content-center align-items-center">
+                  <div
+                    className="box-padding d-flex flex-column justify-content-center align-items-center"
+                    style={{ borderBottom: "1px solid rgba(0, 0, 0, 0.12)" }}
+                  >
                     <div className="icon-background d-flex justify-content-center align-items-center mb-2">
-                      <ChatBubbleOutlineIcon />
+                      <ReceiptOutlinedIcon />
                     </div>
                     <div>Invoice</div>
                   </div>
@@ -124,8 +140,10 @@ function Navbar(props) {
             />
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="p-3">
-            <div className="mb-3 default-dark font-md">Notifications</div>
+          <Dropdown.Menu className="p-3" align="end">
+            <div className="mb-3 default font-md" style={{ fontWeight: "600" }}>
+              Notifications
+            </div>
             <Divider />
             <Dropdown.Item
               style={{ color: "rgba(50, 71, 92, 0.6)" }}
@@ -196,7 +214,11 @@ function Navbar(props) {
           </Dropdown.Menu>
         </Dropdown>
 
-        <DropdownButton title="" className="image-dropdown myProfile">
+        <DropdownButton
+          title=""
+          className="image-dropdown myProfile"
+          align="end"
+        >
           <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
             <div className="d-flex flex-row mb-2 ">
               <div className="myImg me-3"></div>
