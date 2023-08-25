@@ -50,6 +50,7 @@ import MultilineChartOutlinedIcon from "@mui/icons-material/MultilineChartOutlin
 import TrackChangesOutlinedIcon from "@mui/icons-material/TrackChangesOutlined";
 import BubbleChartOutlinedIcon from "@mui/icons-material/BubbleChartOutlined";
 import EqualizerOutlinedIcon from "@mui/icons-material/EqualizerOutlined";
+import BrandingWatermarkOutlinedIcon from "@mui/icons-material/BrandingWatermarkOutlined";
 
 import "./General.css";
 import "./App.css";
@@ -158,6 +159,7 @@ export default function App() {
     typography: TextFieldsIcon,
     icons: InsertEmoticonIcon,
     editor: BorderColorIcon,
+    components: BrandingWatermarkOutlinedIcon,
     calendar: CalendarMonthIcon,
     line: StackedLineChartIcon,
     bar: EqualizerOutlinedIcon,
@@ -469,7 +471,7 @@ export default function App() {
               )}
             </div>
             <List sx={{ color: "background.pen" }}>
-              {["typography", "icons", "editor"].map((text, index) => (
+              {["typography", "icons", "components"].map((text, index) => (
                 <ListItem key={index} disablePadding sx={{ display: "block" }}>
                   <NavLink
                     to={text}

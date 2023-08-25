@@ -18,6 +18,7 @@ import BubbleChart from "../components/Charts/BubbleChart";
 import PieChart from "../components/Charts/PieChart";
 import PolarChart from "../components/Charts/PolarChart";
 import RadarChart from "../components/Charts/RadarChart";
+import Components from "../components/UserInterface/Components";
 
 const routes = [
   { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
@@ -77,7 +78,7 @@ const routes = [
   { path: "typography", element: <Typography /> },
   { path: "editor", element: <Editor /> },
   { path: "icons", element: <Icons /> },
-  // { path: "calendar", element: <Calendar /> },
+  { path: "components", element: <Components /> },
   { path: "area", element: <AreaChart /> },
   { path: "bar", element: <BarChart /> },
   { path: "bubble", element: <BubbleChart /> },
