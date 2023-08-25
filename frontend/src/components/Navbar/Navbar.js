@@ -33,8 +33,34 @@ function Navbar(props) {
         <div style={{ fontSize: "1.2rem" }}>Search (Ctrl+/)</div>
       </div>
       <div className="d-flex justify-content-end align-items-center px-3 gap-3">
-        <DarkModeOutlinedIcon fontSize="medium" />
+        {/* <DarkModeOutlinedIcon fontSize="medium" /> */}
         {/* <GridViewOutlinedIcon fontSize="medium" /> */}
+        <Dropdown>
+          <Dropdown.Toggle
+            id="dropdown-basic"
+            style={{ backgroundColor: "transparent", border: "none" }}
+          >
+            <DarkModeOutlinedIcon className="default" fontSize="medium" />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="p-3" align="end">
+            <div className="default font-md mb-3" style={{ fontWeight: "600" }}>
+              Primary Color
+            </div>
+            <Divider />
+            <div className="d-flex flex-row gap-2 mt-3">
+              <div className="color-div blue"></div>
+              <div className="color-div gray"></div>
+              <div className="color-div green"></div>
+              <div className="color-div red"></div>
+              <div className="color-div orange"></div>
+              <div className="color-div purple"></div>
+            </div>
+
+            <Divider />
+          </Dropdown.Menu>
+        </Dropdown>
+
         <Dropdown>
           <Dropdown.Toggle
             id="dropdown-basic"
