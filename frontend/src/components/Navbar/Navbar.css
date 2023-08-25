@@ -41,6 +41,22 @@
   height: 40px;
   border-radius: 50%;
 }
+
+.img1 {
+  background-image: url("../../images/avatars/4.png");
+}
+
+.img2 {
+  background-image: url("../../images/avatars/6.png");
+}
+.img3 {
+  background-image: url("../../images/avatars/1.png");
+}
+
+.img4 {
+  background-image: url("../../images/avatars/11.png");
+}
+
 .image-dropdown .dropdown-toggle {
   background-color: red !important;
   background-image: url("../../images/avatars/0.jpg");
@@ -58,4 +74,28 @@
 
 .myProfile .dropdown-menu.show {
   width: 230px;
+}
+
+/* notification */
+.notification .dropdown-toggle {
+  background-image: url("../../images/cards/notification.png") !important;
+  background-color: white !important;
+  /* background-image: url("../../images/cards/icons-more.png"); */
+  background-size: cover;
+  background-position: center;
+  border: 0 !important;
+  width: 24px;
+  height: 24px;
+}
+
+.notification .dropdown-toggle::after {
+  color: transparent;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbarDiv .btn {
+  padding: 0;
 }

@@ -27,10 +27,173 @@ function Navbar(props) {
         <SearchOutlinedIcon fontSize="medium" />
         <div style={{ fontSize: "1.2rem" }}>Search (Ctrl+/)</div>
       </div>
-      <div className="d-flex justify-content-end gap-3 align-items-center px-3">
+      <div className="d-flex justify-content-end align-items-center px-3 gap-3">
         <DarkModeOutlinedIcon fontSize="medium" />
         <GridViewOutlinedIcon fontSize="medium" />
-        <NotificationsNoneOutlinedIcon fontSize="medium" />
+        <Dropdown>
+          <Dropdown.Toggle
+            id="dropdown-basic"
+            style={{ backgroundColor: "transparent", border: "none" }}
+          >
+            <NotificationsNoneOutlinedIcon
+              className="default"
+              fontSize="medium"
+            />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="p-3">
+            <div className="mb-3 default-dark">Notifications</div>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)" }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img1 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    Congratulations, Sunny
+                  </div>
+                  <div className=" font-xs">
+                    Won the monthly best student badge
+                  </div>
+                </div>
+                {/* <div className="font-xs">Today</div> */}
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2 ">
+                <div className="myImg img2 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    New Message Received!
+                  </div>
+                  <div className=" font-xs">You have 10 unread messages</div>
+                </div>
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img3 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    New User Registered!
+                  </div>
+                  <div className=" font-xs">5 hours age</div>
+                </div>
+                {/* <div className="font-xs">Yesterday</div> */}
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img4 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">Received Order</div>
+                  <div className=" font-xs">New order received from John</div>
+                </div>
+              </div>
+              <Divider />
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
+        <Dropdown>
+          <Dropdown.Toggle
+            id="dropdown-basic"
+            style={{ backgroundColor: "transparent", border: "none" }}
+          >
+            <NotificationsNoneOutlinedIcon
+              className="default"
+              fontSize="medium"
+            />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className="p-3">
+            <div className="mb-3 default-dark">Notifications</div>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)" }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img1 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    Congratulations, Sunny
+                  </div>
+                  <div className=" font-xs">
+                    Won the monthly best student badge
+                  </div>
+                </div>
+                {/* <div className="font-xs">Today</div> */}
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2 ">
+                <div className="myImg img2 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    New Message Received!
+                  </div>
+                  <div className=" font-xs">You have 10 unread messages</div>
+                </div>
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img3 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">
+                    New User Registered!
+                  </div>
+                  <div className=" font-xs">5 hours age</div>
+                </div>
+                {/* <div className="font-xs">Yesterday</div> */}
+              </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item
+              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
+              href="#"
+              className="p-0 py-2"
+            >
+              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
+                <div className="myImg img4 me-3"></div>
+                <div>
+                  <div className="default-dark font-sm">Received Order</div>
+                  <div className=" font-xs">New order received from John</div>
+                </div>
+              </div>
+              <Divider />
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
         <DropdownButton title="" className="image-dropdown myProfile">
           <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
             <div className="d-flex flex-row mb-2 ">
