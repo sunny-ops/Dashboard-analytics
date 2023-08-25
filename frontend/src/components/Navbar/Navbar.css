@@ -32,3 +32,30 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.myImg {
+  background-image: url("../../images/avatars/0.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.image-dropdown .dropdown-toggle {
+  background-color: red !important;
+  background-image: url("../../images/avatars/0.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 0 !important;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.image-dropdown .dropdown-toggle::after {
+  color: transparent;
+}
+
+.myProfile .dropdown-menu.show {
+  width: 230px;
+}

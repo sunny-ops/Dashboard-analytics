@@ -127,7 +127,7 @@ const myTheme = createTheme({
   palette: {
     primary: {
       main: "rgb(3, 195, 236)", // 主题颜色
-      bgMain: "rgba(3, 195, 236, 0.16);", //主题bgColor
+      bgMain: "rgba(3, 195, 236, 0.16)", //主题bgColor
     },
     background: {
       paper: "#FFFFFF",
@@ -190,9 +190,13 @@ export default function App() {
           position="fixed"
           open={open}
           // style={{ backgroundColor: "rgb(3, 195, 236)" }}
-          style={{ backgroundColor: "transparent", boxShadow: "none" }}
+          style={{
+            backgroundColor: "transparent",
+            boxShadow: "none",
+            height: "0",
+          }}
         >
-          <Toolbar>
+          <Toolbar style={{ height: "0", width: "0" }}>
             <IconButton
               style={{ background: myTheme.palette.primary.main }}
               color="inherit"

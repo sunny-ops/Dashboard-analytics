@@ -5,6 +5,15 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useTheme } from "@mui/material/styles";
+import { Dropdown, DropdownButton } from "react-bootstrap";
+import Divider from "@mui/material/Divider";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import SettingsIcon from "@mui/icons-material/Settings";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
+
 import "./Navbar.css";
 
 function Navbar(props) {
@@ -22,13 +31,55 @@ function Navbar(props) {
         <DarkModeOutlinedIcon fontSize="medium" />
         <GridViewOutlinedIcon fontSize="medium" />
         <NotificationsNoneOutlinedIcon fontSize="medium" />
-        <div className="MuiAvatar-root MuiAvatar-circular css-1o3owhp">
-          <img
-            alt="John Doe"
-            src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2011/07/outdoor-portraits-1.jpg?fit=5184%2C3456&ssl=1"
-            className="MuiAvatar-img css-1hy9t21"
-          />
-        </div>
+        <DropdownButton title="" className="image-dropdown myProfile">
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row mb-2 ">
+              <div className="myImg me-3"></div>
+              <div>
+                <div className="default-dark font-sm">Sunny</div>
+                <div className=" font-xs">Admin</div>
+              </div>
+            </div>
+            <Divider />
+          </Dropdown.Item>
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <PersonOutlineIcon />
+              <div>Profile</div>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <ChatBubbleOutlineIcon />
+              <div>Chat</div>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <MailOutlineIcon />
+              <div>Inbox</div>
+            </div>
+          </Dropdown.Item>
+          <Divider />
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <SettingsIcon />
+              <div>Settings</div>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <MonetizationOnOutlinedIcon />
+              <div>Pricing</div>
+            </div>
+          </Dropdown.Item>
+          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+            <div className="d-flex flex-row p-2 gap-3">
+              <LiveHelpOutlinedIcon />
+              <div>FAQ</div>
+            </div>
+          </Dropdown.Item>
+        </DropdownButton>
       </div>
     </div>
   );
