@@ -49,8 +49,21 @@ function Navbar(props) {
             </div>
             <Divider />
             <div className="d-flex flex-row gap-2 mt-3">
-              <div className="color-div blue"></div>
-              <div className="color-div gray"></div>
+              <div
+                className="color-div blue"
+                onClick={() => {
+                  props.change("rgb(3, 195, 236)", "rgba(3, 195, 236, 0.16)");
+                }}
+              ></div>
+              <div
+                className="color-div gray"
+                onClick={() => {
+                  props.change(
+                    "rgb(133, 146, 163)",
+                    "rgba(133, 146, 163, 0.16)"
+                  );
+                }}
+              ></div>
               <div className="color-div green"></div>
               <div className="color-div red"></div>
               <div className="color-div orange"></div>

@@ -2,6 +2,7 @@ import routes from "./route/routes";
 import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
 import * as React from "react";
+import { useState } from "react";
 import {
   styled,
   useTheme,
@@ -123,23 +124,31 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-const myTheme = createTheme({
-  palette: {
-    primary: {
-      main: "rgb(3, 195, 236)", // 主题颜色
-      bgMain: "rgba(3, 195, 236, 0.16)", //主题bgColor
-    },
-    background: {
-      paper: "#FFFFFF",
-      pen: "rgba(50, 71, 92, 0.6)",
-    },
-  },
-});
-
 export default function App() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [openNest, setOpenNest] = React.useState(false);
+
+  const [mainColor, setMainColor] = useState("rgb(3, 195, 236)");
+  const [mainBgColor, setMainBgColor] = useState("rgba(3, 195, 236, 0.16)");
+
+  const myTheme = createTheme({
+    palette: {
+      primary: {
+        main: mainColor, // 主题颜色
+        bgMain: mainBgColor, //主题bgColor
+      },
+      background: {
+        paper: "#FFFFFF",
+        pen: "rgba(50, 71, 92, 0.6)",
+      },
+    },
+  });
+
+  const changeMain = (color, bgColor) => {
+    setMainColor(color);
+    setMainBgColor(bgColor);
+  };
 
   const iconMap = {
     email: MailIcon,
@@ -557,7 +566,7 @@ export default function App() {
           }}
         >
           <div className="container" style={{ padding: "0" }}>
-            <Navbar />
+            <Navbar change={changeMain} />
             {element}
             <Footer />
           </div>
