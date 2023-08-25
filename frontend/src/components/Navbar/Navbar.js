@@ -14,6 +14,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
 
+import { NavLink, useRoutes, useMatch } from "react-router-dom";
+
 import "./Navbar.css";
 
 function Navbar(props) {
@@ -29,86 +31,85 @@ function Navbar(props) {
       </div>
       <div className="d-flex justify-content-end align-items-center px-3 gap-3">
         <DarkModeOutlinedIcon fontSize="medium" />
-        <GridViewOutlinedIcon fontSize="medium" />
+        {/* <GridViewOutlinedIcon fontSize="medium" /> */}
         <Dropdown>
           <Dropdown.Toggle
             id="dropdown-basic"
             style={{ backgroundColor: "transparent", border: "none" }}
           >
-            <NotificationsNoneOutlinedIcon
-              className="default"
-              fontSize="medium"
-            />
+            <GridViewOutlinedIcon className="default" fontSize="medium" />
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="p-3">
-            <div className="mb-3 default-dark">Notifications</div>
-            <Dropdown.Item
-              style={{ color: "rgba(50, 71, 92, 0.6)" }}
-              href="#"
-              className="p-0 py-2"
-            >
-              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
-                <div className="myImg img1 me-3"></div>
-                <div>
-                  <div className="default-dark font-sm">
-                    Congratulations, Sunny
+          <Dropdown.Menu className="p-3" style={{ width: "300px" }}>
+            <div className="mb-3 default-dark font-md ms-2">Shortcuts</div>
+            <Divider />
+
+            <div className="d-flex flex-row">
+              <Dropdown.Item
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                href="#"
+              >
+                <NavLink to="email/inbox" style={{ color: "inherit" }}>
+                  <div
+                    className="box-padding d-flex flex-column justify-content-center align-items-center"
+                    style={{ borderRight: "1px solid rgba(0, 0, 0, 0.12)" }}
+                  >
+                    <div className="icon-background d-flex justify-content-center align-items-center mb-2">
+                      <MailOutlineIcon />
+                    </div>
+                    <div>Email</div>
                   </div>
-                  <div className=" font-xs">
-                    Won the monthly best student badge
+                </NavLink>
+              </Dropdown.Item>
+
+              <Dropdown.Item
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                href="#"
+              >
+                <NavLink to="chat" style={{ color: "inherit" }}>
+                  <div className="box-padding d-flex flex-column justify-content-center align-items-center">
+                    <div className="icon-background d-flex justify-content-center align-items-center mb-2">
+                      <ChatBubbleOutlineIcon />
+                    </div>
+                    <div>Chat</div>
                   </div>
-                </div>
-                {/* <div className="font-xs">Today</div> */}
-              </div>
-              <Divider />
-            </Dropdown.Item>
-            <Dropdown.Item
-              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
-              href="#"
-              className="p-0 py-2"
-            >
-              <div className="d-flex flex-row mb-2 align-items-center gap-2 ">
-                <div className="myImg img2 me-3"></div>
-                <div>
-                  <div className="default-dark font-sm">
-                    New Message Received!
+                </NavLink>
+              </Dropdown.Item>
+            </div>
+            <Divider />
+            <div className="d-flex flex-row">
+              <Dropdown.Item
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                href="#"
+              >
+                <NavLink to="user" style={{ color: "inherit" }}>
+                  <div
+                    className="box-padding d-flex flex-column justify-content-center align-items-center"
+                    style={{ borderRight: "1px solid rgba(0, 0, 0, 0.12)" }}
+                  >
+                    <div className="icon-background d-flex justify-content-center align-items-center mb-2">
+                      <MailOutlineIcon />
+                    </div>
+                    <div>User</div>
                   </div>
-                  <div className=" font-xs">You have 10 unread messages</div>
-                </div>
-              </div>
-              <Divider />
-            </Dropdown.Item>
-            <Dropdown.Item
-              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
-              href="#"
-              className="p-0 py-2"
-            >
-              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
-                <div className="myImg img3 me-3"></div>
-                <div>
-                  <div className="default-dark font-sm">
-                    New User Registered!
+                </NavLink>
+              </Dropdown.Item>
+
+              <Dropdown.Item
+                style={{ color: "rgba(50, 71, 92, 0.6)" }}
+                href="#"
+                className="p-0 py-2"
+              >
+                <NavLink to="invoice" style={{ color: "inherit" }}>
+                  <div className="box-padding d-flex flex-column justify-content-center align-items-center">
+                    <div className="icon-background d-flex justify-content-center align-items-center mb-2">
+                      <ChatBubbleOutlineIcon />
+                    </div>
+                    <div>Invoice</div>
                   </div>
-                  <div className=" font-xs">5 hours age</div>
-                </div>
-                {/* <div className="font-xs">Yesterday</div> */}
-              </div>
-              <Divider />
-            </Dropdown.Item>
-            <Dropdown.Item
-              style={{ color: "rgba(50, 71, 92, 0.6)", padding: 0 }}
-              href="#"
-              className="p-0 py-2"
-            >
-              <div className="d-flex flex-row mb-2 align-items-center gap-2  ">
-                <div className="myImg img4 me-3"></div>
-                <div>
-                  <div className="default-dark font-sm">Received Order</div>
-                  <div className=" font-xs">New order received from John</div>
-                </div>
-              </div>
-              <Divider />
-            </Dropdown.Item>
+                </NavLink>
+              </Dropdown.Item>
+            </div>
           </Dropdown.Menu>
         </Dropdown>
 
@@ -124,7 +125,8 @@ function Navbar(props) {
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="p-3">
-            <div className="mb-3 default-dark">Notifications</div>
+            <div className="mb-3 default-dark font-md">Notifications</div>
+            <Divider />
             <Dropdown.Item
               style={{ color: "rgba(50, 71, 92, 0.6)" }}
               href="#"
