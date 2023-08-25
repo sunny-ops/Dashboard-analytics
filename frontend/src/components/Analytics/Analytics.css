@@ -35,17 +35,33 @@
   color: transparent;
 }
 
-.dropdown-menu.show {
-  min-width: 50px;
-  left: -35px;
+.payment-dropdown .dropdown-menu.show {
+  min-width: 100px;
+  /* left: -35px; */
   border: 0;
   box-shadow: rgba(50, 71, 92, 0.2) 0px 5px 5px -3px,
     rgba(50, 71, 92, 0.14) 0px 8px 10px 1px,
     rgba(50, 71, 92, 0.12) 0px 3px 14px 2px;
 }
 
+.year-dropdown .dropdown-menu.show {
+  min-width: 70px;
+  /* left: -35px; */
+  border: 0;
+  box-shadow: rgba(50, 71, 92, 0.2) 0px 5px 5px -3px,
+    rgba(50, 71, 92, 0.14) 0px 8px 10px 1px,
+    rgba(50, 71, 92, 0.12) 0px 3px 14px 2px;
+}
+
+.payment-dropdown .dropdown-item {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding: 10px !important;
+  color: rgba(50, 71, 92, 0.6);
+}
 .dropdown-item:active {
   background-color: transparent !important;
+  padding: 10px;
 }
 
 .apexcharts-ycrosshairs-hidden {

@@ -15,16 +15,18 @@ function Payment(props) {
           src={require(`../../images/cards/${props.imgName}`)}
           className="smallIcon"
         ></img>
-        <DropdownButton title="" className="payment-dropdown">
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            Refresh
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            Share
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            Update
-          </Dropdown.Item>
+        <DropdownButton title="" className="payment-dropdown" align="end">
+          <div className="">
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              Refresh
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              Share
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              Update
+            </Dropdown.Item>
+          </div>
         </DropdownButton>
         {/* <MoreVertOutlinedIcon /> */}
       </div>

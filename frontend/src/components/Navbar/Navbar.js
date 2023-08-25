@@ -15,6 +15,7 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 
 import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
@@ -47,12 +48,13 @@ function Navbar(props) {
             style={{ width: "300px" }}
             align="end"
           >
-            <div
-              className="mb-3 default font-md ms-2 ps-3"
-              style={{ fontWeight: "600" }}
-            >
-              Shortcuts
+            <div className="d-flex flex-row justify-content-between align-items-center mb-3 mx-3">
+              <div className="default font-md " style={{ fontWeight: "600" }}>
+                Shortcuts
+              </div>
+              <AddCircleOutlineOutlinedIcon className="default-color" />
             </div>
+
             <Divider />
 
             <div className="d-flex flex-row">
@@ -223,7 +225,13 @@ function Navbar(props) {
             <div className="d-flex flex-row mb-2 ">
               <div className="myImg me-3"></div>
               <div>
-                <div className="default-dark font-sm">Sunny</div>
+                <div
+                  className="default-color font-sm"
+                  style={{ fontWeight: "600" }}
+                >
+                  Sunny
+                </div>
+
                 <div className=" font-xs">Admin</div>
               </div>
             </div>

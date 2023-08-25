@@ -181,7 +181,7 @@ function Analytics(props) {
               </div>
               <div className="flex-grow-1 m-3">
                 <div className="d-flex flex-column align-items-center">
-                  <Dropdown className="mb-3 mt-3">
+                  <Dropdown className="mb-3 mt-3 year-dropdown">
                     <Dropdown.Toggle
                       id="dropdown-basic"
                       style={{ color: themeColor, borderColor: themeColor }}
@@ -190,10 +190,41 @@ function Analytics(props) {
                       2023
                     </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">2022</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">2021</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">2020</Dropdown.Item>
+                    <Dropdown.Menu
+                      align="end"
+                      className=""
+                      style={{ width: "50px!important" }}
+                    >
+                      <Dropdown.Item
+                        // className="py-2"
+                        style={{
+                          color: "rgba(50, 71, 92, 0.6)",
+                          textAlign: "center",
+                        }}
+                        href="#/action-1"
+                      >
+                        2022
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        // className="py-2"
+                        style={{
+                          color: "rgba(50, 71, 92, 0.6)",
+                          textAlign: "center",
+                        }}
+                        href="#/action-2"
+                      >
+                        2021
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        // className="py-2"
+                        style={{
+                          color: "rgba(50, 71, 92, 0.6)",
+                          textAlign: "center",
+                        }}
+                        href="#/action-3"
+                      >
+                        2020
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                   <div
@@ -319,7 +350,11 @@ function Analytics(props) {
               <div>
                 <div className="d-flex flex-row justify-content-between">
                   <div className="default-dark font-lg">Order Statistics</div>
-                  <DropdownButton title="" className="payment-dropdown">
+                  <DropdownButton
+                    title=""
+                    className="payment-dropdown"
+                    align="end"
+                  >
                     <Dropdown.Item
                       style={{ color: "rgba(50, 71, 92, 0.6)" }}
                       href="#"
@@ -446,7 +481,11 @@ function Analytics(props) {
             <Item className="box-padding" style={{ height: "464px" }}>
               <div className="d-flex flex-row justify-content-between mb-3">
                 <div className="default-dark font-lg">Transition</div>
-                <DropdownButton title="" className="payment-dropdown">
+                <DropdownButton
+                  title=""
+                  className="payment-dropdown"
+                  align="end"
+                >
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
                     href="#"
@@ -507,7 +546,11 @@ function Analytics(props) {
                 <div className="default-dark font-lg mb-3">
                   Activity Timeline
                 </div>
-                <DropdownButton title="" className="payment-dropdown">
+                <DropdownButton
+                  title=""
+                  className="payment-dropdown"
+                  align="end"
+                >
                   <Dropdown.Item
                     style={{ color: "rgba(50, 71, 92, 0.6)" }}
                     href="#"
