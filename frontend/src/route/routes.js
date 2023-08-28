@@ -19,6 +19,9 @@ import PieChart from "../components/Charts/PieChart";
 import PolarChart from "../components/Charts/PolarChart";
 import RadarChart from "../components/Charts/RadarChart";
 import Components from "../components/UserInterface/Components";
+import Login from "../components/Login/Login";
+import Signup from "../components/Login/Signup";
+import App from "../App";
 
 const routes = [
   { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
@@ -86,6 +89,9 @@ const routes = [
   { path: "pie", element: <PieChart /> },
   { path: "polar", element: <PolarChart /> },
   { path: "radar", element: <RadarChart /> },
+  { path: "login", element: <Login /> },
+  { path: "signup", element: <Signup /> },
+  { path: "app", element: <App /> },
 ];
 
 export default routes;
