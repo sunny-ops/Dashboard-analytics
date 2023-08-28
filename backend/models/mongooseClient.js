@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 // import json data
 
-let clients = [{ username: "sunny@gmail.com", password: "123456" }];
+let clients = [
+  { username: "sunny", email: "sunny@gmail.com", password: "123456" },
+];
 
 // import Mongoose Model
 const ClientModel = require("./ClientModel");
