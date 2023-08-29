@@ -41,13 +41,13 @@ function Login(props) {
 
   return (
     <div className="d-flex" style={{ height: "100vh" }}>
-      <div className="col-7 p-5 d-flex justify-content-center align-items-center">
+      <div className="col-lg-7 p-5 d-flex justify-content-center align-items-center">
         <img
           style={{ width: "700px" }}
           src="https://solelysneat.vercel.app/images/pages/boy-with-rocket-light.png"
         />
       </div>
-      <div className="col-5 d-flex flex-column justify-content-center align-items-center">
+      <div className="col-lg-5 d-flex flex-column justify-content-center align-items-center">
         <div style={{ width: "400px" }}>
           <div className="d-flex flex-row g-2 mb-5">
             <AutoAwesomeIcon style={{ color: "rgb(3, 195, 236)" }} />

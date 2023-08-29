@@ -34,6 +34,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Analytics(props) {
+  console.log(props.value);
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
   const [transitions, setTransitions] = useState([]);
