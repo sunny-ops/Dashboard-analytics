@@ -36,7 +36,8 @@ function Navbar(props) {
     console.log("logout");
     navigate("/login");
   };
-  const avatar = "0.jpg"; // 这可以是动态的
+  const imgInt = Math.floor(Math.random() * 20) + 1;
+
   // 现在你可以使用 theme 变量来获取主题的值
   // console.log("main", theme.palette.primary.main);
   return (
@@ -350,21 +351,32 @@ function Navbar(props) {
         </Dropdown>
 
         <DropdownButton
-          title=""
+          title={
+            <img
+              // src={require("../../images/avatars/1.png")}
+              src={require(`../../images/avatars/${imgInt}.png`)}
+              className="myImg"
+              alt="Portrait"
+            />
+          }
           className="image-dropdown myProfile"
           align="end"
-          style={{ backgroundImage: `url("../../images/avatars/${avatar}")` }}
         >
           <div className="px-3">
             <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
               <div className="d-flex flex-row mb-2">
-                <div className="myImg me-3"></div>
+                <div className="d-flex justify-content-center align-items-center me-3">
+                  <img
+                    className="myImg"
+                    src={require(`../../images/avatars/${imgInt}.png`)}
+                  />
+                </div>
                 <div>
                   <div
                     className="default-color font-sm"
                     style={{ fontWeight: "600", textTransform: "capitalize" }}
                   >
-                    {props.username}
+                    {props.username ? props.username : "Sunny"}
                   </div>
 
                   <div className=" font-xs">
