@@ -24,6 +24,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Browser from "./Browser";
 import { Divider } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -34,7 +35,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Analytics(props) {
-  console.log(props.value);
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
+  const username = params.get("username");
+
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;
   const [transitions, setTransitions] = useState([]);

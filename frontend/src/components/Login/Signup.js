@@ -28,7 +28,8 @@ function Signup(props) {
         console.log(res);
         console.log(res.data.message);
         if (res.data.code === 1) {
-          navigate("/dashboards/analytics");
+          const username = res.data.username;
+          navigate(`/dashboards/analytics?username=${username}`);
         } else {
           console.log(res.data.code);
         }

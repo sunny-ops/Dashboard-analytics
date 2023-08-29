@@ -53,6 +53,7 @@ router.post("/signin", passCrypt, (req, res) => {
             code: 1,
             message: "登陆成功",
             data: "",
+            username: data[0].username,
           });
         } else {
           res.json({
@@ -84,6 +85,7 @@ router.post("/signup", passCrypt, (req, res) => {
           code: 1,
           message: "注册成功",
           data: "",
+          username: data.username,
         });
       });
     } else {
