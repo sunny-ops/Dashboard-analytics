@@ -8,6 +8,7 @@ const express = require("express");
 // import router
 const analyticsRouter = require(__dirname + "/routers/analyticsRouter.js");
 const appsRouter = require(__dirname + "/routers/appsRouter.js");
+const loginRouter = require(__dirname + "/routers/loginRouter.js");
 
 // import cors
 const cors = require("cors");
@@ -16,6 +17,8 @@ const cors = require("cors");
 const app = express();
 app.use("/api", analyticsRouter);
 app.use("/api", appsRouter);
+app.use("/api", loginRouter);
+
 app.use(cors());
 // 使用json,urlencoded中间件接收传输的json表单数据，放到req.body上
 app.use(express.json());
