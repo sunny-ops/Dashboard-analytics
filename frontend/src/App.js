@@ -192,7 +192,7 @@ export default function App() {
     setOpen(false);
   };
   const element = useRoutes(routes);
-  console.log("theme.direction", theme.direction);
+  // console.log("theme.direction", theme.direction);
   return (
     <ThemeProvider theme={myTheme}>
       <Box sx={{ display: "flex" }}>

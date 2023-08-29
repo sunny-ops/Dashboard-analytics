@@ -31,10 +31,47 @@ router.get("/clients", (req, res) => {
     });
 });
 
-router.post("/signup", (req, res) => {
+router.post("/signin", passCrypt, (req, res) => {
+  console.log(req.body); //{ username: 'li123456', password: '123456' }
+  // res.send('post请求成功')
+  ClientModel.find({ email: `${req.body.email}` })
+    .then((data) => {
+      console.log(data);
+      if (data.length === 0) {
+        console.log("数据库中没有该数据");
+        res.json({
+          code: 0,
+          message: "您的账户未注册",
+          data: "",
+        });
+      } else {
+        console.log("数据库中有该数据");
+        console.log("data[0].password", data[0].password);
+        console.log("req.body.password", req.body.password);
+        if (req.body.password === data[0].password) {
+          res.json({
+            code: 1,
+            message: "登陆成功",
+            data: "",
+          });
+        } else {
+          res.json({
+            code: 2,
+            message: "您的用户名或密码不正确",
+            data: "",
+          });
+        }
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+router.post("/signup", passCrypt, (req, res) => {
   console.log(req.body);
   ClientModel.find({ username: `${req.body.username}` }).then((data) => {
-    console.log("data", data);
+    // console.log("data", data);
     if (data.length === 0) {
       console.log("数据库中没有该数据");
       ClientModel.create({
