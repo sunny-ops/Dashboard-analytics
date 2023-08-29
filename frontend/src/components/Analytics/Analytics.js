@@ -35,10 +35,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Analytics(props) {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
+  // const location = useLocation();
+  // const params = new URLSearchParams(location.search);
 
-  const username = params.get("username");
+  // const username = params.get("username");
+  // console.log("username", username);
 
   const theme = useTheme();
   const themeColor = theme.palette.primary.main;

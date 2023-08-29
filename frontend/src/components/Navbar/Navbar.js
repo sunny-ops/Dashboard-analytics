@@ -36,6 +36,7 @@ function Navbar(props) {
     console.log("logout");
     navigate("/login");
   };
+  const avatar = "0.jpg"; // 这可以是动态的
   // 现在你可以使用 theme 变量来获取主题的值
   // console.log("main", theme.palette.primary.main);
   return (
@@ -285,7 +286,10 @@ function Navbar(props) {
                 <div className="myImg img1 me-3"></div>
                 <div>
                   <div className="default-dark font-sm">
-                    Congratulations, Sunny
+                    Congratulations,{" "}
+                    <span style={{ textTransform: "capitalize" }}>
+                      {props.username}
+                    </span>
                   </div>
                   <div className=" font-xs">
                     Won the monthly best student badge
@@ -349,6 +353,7 @@ function Navbar(props) {
           title=""
           className="image-dropdown myProfile"
           align="end"
+          style={{ backgroundImage: `url("../../images/avatars/${avatar}")` }}
         >
           <div className="px-3">
             <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
@@ -357,12 +362,14 @@ function Navbar(props) {
                 <div>
                   <div
                     className="default-color font-sm"
-                    style={{ fontWeight: "600" }}
+                    style={{ fontWeight: "600", textTransform: "capitalize" }}
                   >
-                    Sunny
+                    {props.username}
                   </div>
 
-                  <div className=" font-xs">Admin</div>
+                  <div className=" font-xs">
+                    {props.username === "sunny" ? "Admin" : "Client"}
+                  </div>
                 </div>
               </div>
               <Divider />

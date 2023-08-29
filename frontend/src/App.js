@@ -57,6 +57,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./Footer";
+import { useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -126,6 +127,12 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function App() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+
+  const username = params.get("username");
+  console.log("app.js username", username);
+
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [openNest, setOpenNest] = React.useState(false);
@@ -234,93 +241,6 @@ export default function App() {
             </IconButton>
           </DrawerHeader>
           <Divider />
-          {/* <List
-            sx={{
-              width: "100%",
-              maxWidth: 360,
-              bgcolor: "background.paper",
-              color: "background.pen",
-              px: 1,
-            }}
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            subheader={
-              <ListSubheader
-                component="div"
-                id="nested-list-subheader"
-              ></ListSubheader>
-            }
-          >
-            <ListItemButton className="round-border" onClick={handleClick}>
-              <ListItemIcon style={{ color: "inherit" }}>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText primary="Dashboards" />
-              {openNest ? <ExpandLess /> : <ExpandMore />}
-            </ListItemButton>
-            {open ? (
-              <Collapse in={openNest} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
-                  <NavLink
-                    to="dashboards/analytics"
-                    className={({ isActive }) => {
-                      return isActive
-                        ? "active round-border nav-link"
-                        : "default round-border nav-link";
-                    }}
-                    style={{ "--color": myTheme.palette.primary.main }}
-                  >
-                    <ListItemButton
-                      className="round-border"
-                      sx={{
-                        pl: 4,
-                      }}
-                    >
-                      <ListItemIcon style={{ color: "inherit" }}>
-                        <FiberManualRecordIcon fontSize="xs" />
-                      </ListItemIcon>
-                      <ListItemText primary="Analytics" />
-                    </ListItemButton>
-                  </NavLink>
-
-                  <NavLink
-                    to="dashboards/crm"
-                    className={({ isActive }) => {
-                      return isActive
-                        ? "active round-border nav-link"
-                        : "default round-border nav-link";
-                    }}
-                    style={{ "--color": myTheme.palette.primary.main }}
-                  >
-                    <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                      <ListItemIcon style={{ color: "inherit" }}>
-                        <FiberManualRecordIcon fontSize="xs" />
-                      </ListItemIcon>
-                      <ListItemText primary="CRM" />
-                    </ListItemButton>
-                  </NavLink>
-                  <NavLink
-                    to="dashboards/ecommerce"
-                    className={({ isActive }) => {
-                      return isActive
-                        ? "active round-border nav-link"
-                        : "default round-border nav-link";
-                    }}
-                    style={{ "--color": myTheme.palette.primary.main }}
-                  >
-                    <ListItemButton className="round-border" sx={{ pl: 4 }}>
-                      <ListItemIcon style={{ color: "inherit" }}>
-                        <FiberManualRecordIcon fontSize="xs" />
-                      </ListItemIcon>
-                      <ListItemText primary="Ecommerce" />
-                    </ListItemButton>
-                  </NavLink>
-                </List>
-              </Collapse>
-            ) : (
-              <></>
-            )}
-          </List> */}
 
           <div className="px-2">
             <List sx={{ color: "background.pen" }}>
@@ -583,7 +503,7 @@ export default function App() {
           }}
         >
           <div className="container" style={{ padding: "0" }}>
-            <Navbar change={changeMain} />
+            <Navbar change={changeMain} username={username} />
             {element}
             <Footer />
           </div>

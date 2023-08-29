@@ -58,7 +58,7 @@
 }
 
 .image-dropdown .dropdown-toggle {
-  background-color: red !important;
+  /* background-color: red !important; */
   background-image: url("../../images/avatars/0.jpg");
   background-size: cover;
   background-position: center;
