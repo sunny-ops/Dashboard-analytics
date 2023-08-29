@@ -22,6 +22,8 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useNavigate } from "react-router-dom";
 
 import { NavLink, useRoutes, useMatch } from "react-router-dom";
 
@@ -29,7 +31,11 @@ import "./Navbar.css";
 
 function Navbar(props) {
   const theme = useTheme();
-
+  const navigate = useNavigate();
+  const logoutBtn = () => {
+    console.log("logout");
+    navigate("/login");
+  };
   // 现在你可以使用 theme 变量来获取主题的值
   // console.log("main", theme.palette.primary.main);
   return (
@@ -344,59 +350,68 @@ function Navbar(props) {
           className="image-dropdown myProfile"
           align="end"
         >
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row mb-2 ">
-              <div className="myImg me-3"></div>
-              <div>
-                <div
-                  className="default-color font-sm"
-                  style={{ fontWeight: "600" }}
-                >
-                  Sunny
-                </div>
+          <div className="px-3">
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row mb-2">
+                <div className="myImg me-3"></div>
+                <div>
+                  <div
+                    className="default-color font-sm"
+                    style={{ fontWeight: "600" }}
+                  >
+                    Sunny
+                  </div>
 
-                <div className=" font-xs">Admin</div>
+                  <div className=" font-xs">Admin</div>
+                </div>
               </div>
-            </div>
+              <Divider />
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <PersonOutlineIcon />
+                <div>Profile</div>
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <ChatBubbleOutlineIcon />
+                <div>Chat</div>
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <MailOutlineIcon />
+                <div>Inbox</div>
+              </div>
+            </Dropdown.Item>
             <Divider />
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <PersonOutlineIcon />
-              <div>Profile</div>
-            </div>
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <ChatBubbleOutlineIcon />
-              <div>Chat</div>
-            </div>
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <MailOutlineIcon />
-              <div>Inbox</div>
-            </div>
-          </Dropdown.Item>
-          <Divider />
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <SettingsIcon />
-              <div>Settings</div>
-            </div>
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <MonetizationOnOutlinedIcon />
-              <div>Pricing</div>
-            </div>
-          </Dropdown.Item>
-          <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
-            <div className="d-flex flex-row p-2 gap-3">
-              <LiveHelpOutlinedIcon />
-              <div>FAQ</div>
-            </div>
-          </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <SettingsIcon />
+                <div>Settings</div>
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <MonetizationOnOutlinedIcon />
+                <div>Pricing</div>
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <LiveHelpOutlinedIcon />
+                <div>FAQ</div>
+              </div>
+            </Dropdown.Item>
+            <Divider />
+            <Dropdown.Item style={{ color: "rgba(50, 71, 92, 0.6)" }} href="#">
+              <div className="d-flex flex-row p-2 gap-3">
+                <LogoutIcon />
+                <div onClick={logoutBtn}>Log out</div>
+              </div>
+            </Dropdown.Item>
+          </div>
         </DropdownButton>
       </div>
     </div>
