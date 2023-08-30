@@ -36,7 +36,8 @@ function Navbar(props) {
     console.log("logout");
     navigate("/login");
   };
-  const imgInt = Math.floor(Math.random() * 20) + 1;
+  // const imgInt = Math.floor(Math.random() * 20) + 1;
+  const imgInt = 1;
 
   // 现在你可以使用 theme 变量来获取主题的值
   // console.log("main", theme.palette.primary.main);
