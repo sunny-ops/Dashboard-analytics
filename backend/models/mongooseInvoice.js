@@ -62,7 +62,10 @@ for (let i = 0; i < 100; i++) {
 const InvoiceModel = require("./InvoiceModel");
 console.log(invoices);
 
-mongoose.connect("mongodb://127.0.0.1:27017/datas");
+// mongoose.connect("mongodb://127.0.0.1:27017/datas");
+const connection =
+  "mongodb+srv://shizhong1989:Himym_0814@dashboard.pqdrjut.mongodb.net/datas?retryWrites=true&w=majority";
+mongoose.connect(connection);
 
 mongoose.connection.once("open", () => {
   console.log("mongoose connection success");

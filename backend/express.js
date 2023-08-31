@@ -24,10 +24,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
 
-mongoose.connect("mongodb://127.0.0.1:27017/datas");
+const connection =
+  "mongodb+srv://shizhong1989:Himym_0814@dashboard.pqdrjut.mongodb.net/datas?retryWrites=true&w=majority";
+mongoose.connect(connection);
 
-// import Mongoose Model
-// const TransitionModel = require("./models/TransitionModel");
+// mongoose.connect("mongodb://127.0.0.1:27017/datas");
 
 mongoose.connection.once("open", () => {
   console.log("mongoose connection success");
