@@ -9,6 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { ConstructionOutlined } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 
 function Login(props) {
   let emailRef = useRef();
@@ -101,7 +102,9 @@ function Login(props) {
             <>New on our platform?&nbsp;</>
             <span style={{ color: "rgb(3, 195, 236)" }}>
               {" "}
-              Create an account
+              <NavLink to="/signup" style={{ color: "inherit" }}>
+                Create an account
+              </NavLink>
             </span>
           </div>
         </div>

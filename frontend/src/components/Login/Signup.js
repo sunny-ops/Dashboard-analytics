@@ -6,7 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { useRef } from "react";
 
 function Signup(props) {
@@ -28,9 +28,10 @@ function Signup(props) {
         console.log(res);
         console.log(res.data.message);
         if (res.data.code === 1) {
-          const username = res.data.username;
-          navigate(`/dashboards/analytics?username=${username}`);
+          alert("Sign up Successfully");
+          navigate(`/login`);
         } else {
+          alert("Username has already been registered");
           console.log(res.data.code);
         }
       });
@@ -99,7 +100,11 @@ function Signup(props) {
           </Button>
           <div className="default-color d-flex justify-content-center">
             Already have an account?&nbsp;
-            <span style={{ color: "rgb(3, 195, 236)" }}>Sign in instead</span>
+            <span style={{ color: "rgb(3, 195, 236)" }}>
+              <NavLink to="/login" style={{ color: "inherit" }}>
+                Sign in instead
+              </NavLink>
+            </span>
           </div>
         </div>
       </div>
