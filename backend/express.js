@@ -15,6 +15,8 @@ const cors = require("cors");
 
 // create app
 const app = express();
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
 app.use("/api", analyticsRouter);
 app.use("/api", appsRouter);
 app.use("/api", loginRouter);
@@ -23,6 +25,10 @@ app.use(cors());
 // 使用json,urlencoded中间件接收传输的json表单数据，放到req.body上
 app.use(express.json());
 app.use(express.urlencoded());
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+});
 
 const connection =
   "mongodb+srv://shizhong1989:Himym_0814@dashboard.pqdrjut.mongodb.net/datas?retryWrites=true&w=majority";
