@@ -250,7 +250,7 @@ export default function App() {
                 className="pb-2"
               >
                 <NavLink
-                  to={`dashboards/analytics?username=${username}`}
+                  to={`dashboards/analytics`}
                   className={({ isActive }) => {
                     return isActive
                       ? "active round-border nav-link"
@@ -301,7 +301,7 @@ export default function App() {
             <List sx={{ color: "background.pen" }}>
               <ListItem disablePadding sx={{ display: "block" }}>
                 <NavLink
-                  to={`email/inbox?username=${username}`}
+                  to={`email/inbox`}
                   className={({ isActive }) => {
                     return isActive
                       ? "active round-border nav-link"
@@ -341,7 +341,7 @@ export default function App() {
               {["chat", "user", "invoice"].map((text, index) => (
                 <ListItem key={index} disablePadding sx={{ display: "block" }}>
                   <NavLink
-                    to={`${text}?username=${username}`}
+                    to={`${text}`}
                     className={({ isActive }) => {
                       return isActive
                         ? "active round-border nav-link"
@@ -394,7 +394,7 @@ export default function App() {
               {["typography", "icons", "components"].map((text, index) => (
                 <ListItem key={index} disablePadding sx={{ display: "block" }}>
                   <NavLink
-                    to={`${text}?username=${username}`}
+                    to={`${text}`}
                     className={({ isActive }) => {
                       return isActive
                         ? "active round-border nav-link"
@@ -451,7 +451,7 @@ export default function App() {
                     sx={{ display: "block" }}
                   >
                     <NavLink
-                      to={`${text}?username=${username}`}
+                      to={`${text}`}
                       className={({ isActive }) => {
                         return isActive
                           ? "active round-border nav-link"
