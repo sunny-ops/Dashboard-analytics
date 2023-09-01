@@ -108,7 +108,7 @@ function UserList(props) {
   useEffect(() => {
     axios
       .get(
-        `http://127.0.0.1:8080/api/apps/users?role=${role}&plan=${plan}&status=${status}`
+        `/api/apps/users?role=${role}&plan=${plan}&status=${status}`
         // `http://127.0.0.1:8080/api/apps/users?role=Admin&plan=Team&status=Active`
       )
       .then((res) => {

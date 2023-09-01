@@ -57,7 +57,6 @@ function Analytics(props) {
   const [items, setItems] = useState([]);
 
   const baseURL = window.location.origin;
-  console.log("baseURL", baseURL);
 
   useEffect(() => {
     axios
