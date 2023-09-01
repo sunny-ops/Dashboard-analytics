@@ -56,9 +56,12 @@ function Analytics(props) {
   const [incomeIdx, setIncomeIdx] = useState(0);
   const [items, setItems] = useState([]);
 
+  const baseURL = window.location.origin;
+  console.log("baseURL", baseURL);
+
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/api/analytics/transitions")
+      .get(`/api/analytics/transitions`)
       .then((res) => {
         setTransitions(res.data);
         // console.log(res.data);
@@ -70,7 +73,7 @@ function Analytics(props) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/api/analytics/orders")
+      .get(`${baseURL}/api/analytics/orders`)
       .then((res) => {
         setOrders(res.data);
         // console.log(res.data);
@@ -82,7 +85,7 @@ function Analytics(props) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/api/analytics/browsers/browser")
+      .get(`${baseURL}/api/analytics/browsers/browser`)
       .then((res) => {
         setItems(res.data);
       })
