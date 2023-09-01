@@ -26,5 +26,8 @@
   "homepage": "https://github.com/sunny-ops/Dashboard-analytics#readme",
   "dependencies": {
     "concurrently": "^8.2.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
