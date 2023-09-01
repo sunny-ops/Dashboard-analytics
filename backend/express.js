@@ -4,6 +4,8 @@
 // import mongoose
 const mongoose = require("mongoose");
 const express = require("express");
+// import path
+const path = require("path");
 
 // import router
 const analyticsRouter = require(__dirname + "/routers/analyticsRouter.js");
