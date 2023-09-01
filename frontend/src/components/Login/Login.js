@@ -20,7 +20,7 @@ function Login(props) {
     // 登录
 
     axios
-      .post("http://127.0.0.1:8080/api/signin", {
+      .post("/api/signin", {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       })

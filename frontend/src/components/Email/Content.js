@@ -45,7 +45,7 @@ function Content(props) {
   const iptRef = createRef();
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8080/api/apps/emails/${type}`)
+      .get(`/api/apps/emails/${type}`)
       .then((res) => {
         setRows(res.data);
       })
@@ -59,7 +59,7 @@ function Content(props) {
     let value = iptRef.current.value;
 
     axios
-      .get(`http://127.0.0.1:8080/api/apps/emails/${type}/${value}`)
+      .get(`/api/apps/emails/${type}/${value}`)
       .then((res) => {
         console.log("res.data", res.data);
         setRows(res.data);

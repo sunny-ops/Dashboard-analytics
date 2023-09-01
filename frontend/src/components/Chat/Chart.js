@@ -23,7 +23,7 @@ function Chat(props) {
 
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8080/api/apps/emails/sent`)
+      .get(`/api/apps/emails/sent`)
       .then((res) => {
         setChatContent(res.data);
       })

@@ -19,7 +19,7 @@ function Signup(props) {
     // 注册;
     console.log(usernameRef.current.value);
     axios
-      .post("http://127.0.0.1:8080/api/signup", {
+      .post("/api/signup", {
         username: usernameRef.current.value,
         email: emailRef.current.value,
         password: passwordRef.current.value,

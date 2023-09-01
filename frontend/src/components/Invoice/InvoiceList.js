@@ -98,7 +98,7 @@ function InvoiceList(props) {
   const [rows, setRows] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8080/api/apps/invoices?status=${status}`)
+      .get(`/api/apps/invoices?status=${status}`)
       .then((res) => {
         setRows(res.data);
       })

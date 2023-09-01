@@ -48,7 +48,7 @@ function Browser(props) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/api/analytics/browsers/browser")
+      .get("/api/analytics/browsers/browser")
       .then((res) => {
         setItems(res.data);
       })
@@ -60,7 +60,7 @@ function Browser(props) {
   const browserBtn = (id) => {
     setBrowserIdx(id);
     axios
-      .get(`http://127.0.0.1:8080/api/analytics/browsers/${browserContent[id]}`)
+      .get(`/api/analytics/browsers/${browserContent[id]}`)
       .then((res) => {
         setItems(res.data);
       })
