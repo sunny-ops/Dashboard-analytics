@@ -32,9 +32,9 @@ function Chat(props) {
       });
   }, []);
 
-  console.log("chat", chatContent);
+  // console.log("chat", chatContent);
   const items = chatContent.slice(0, 11);
-  console.log(items);
+  // console.log(items);
 
   const chatBtn = (id) => {
     setChatIdx(id);
@@ -85,7 +85,7 @@ function Chat(props) {
         <div className=" mb-3 d-flex flex-column">
           {items.map((v, id) => {
             return (
-              <>
+              <div key={id}>
                 {id === 3 ? (
                   <div className="font-lg mb-3" style={{ color: themeColor }}>
                     Contacts
@@ -94,7 +94,7 @@ function Chat(props) {
                   <></>
                 )}
                 <div
-                  key={id}
+                  // key={id}
                   style={{
                     color:
                       chatIdx === id ? "white" : theme.palette.background.pen,
@@ -116,7 +116,7 @@ function Chat(props) {
                   </div>
                   <div className="flex-grow-1 text-end">{v.time}</div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

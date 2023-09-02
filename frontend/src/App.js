@@ -131,7 +131,7 @@ export default function App() {
   const params = new URLSearchParams(location.search);
 
   const username = params.get("username");
-  console.log("app.js username", username);
+  // console.log("app.js username", username);
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);

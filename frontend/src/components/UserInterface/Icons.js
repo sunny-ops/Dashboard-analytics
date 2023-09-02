@@ -15,21 +15,21 @@ function Icons(props) {
         Iconify Design
       </div>
       <div className="mb-5">Modern unified SVG framework</div>
-      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
-        <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-h2qpui">
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+      <div className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-15j76c0">
+        <div className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-h2qpui">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:abacus"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -42,19 +42,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:accessibility"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -68,19 +68,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:add-to-queue"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -97,19 +97,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:adjust"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -126,19 +126,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:alarm"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -155,19 +155,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:alarm-add"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -184,19 +184,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:alarm-exclamation"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -213,19 +213,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:alarm-off"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -238,19 +238,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:alarm-snooze"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -267,19 +267,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:album"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -302,19 +302,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:align-justify"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -327,19 +327,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:align-left"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -352,19 +352,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:align-middle"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -377,19 +377,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:align-right"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -402,19 +402,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:analyse"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -431,19 +431,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:anchor"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -456,19 +456,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:angry"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -485,19 +485,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:aperture"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -510,19 +510,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arch"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -535,19 +535,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:archive"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -564,19 +564,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:archive-in"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -590,19 +590,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:archive-out"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -616,19 +616,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:area"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -645,19 +645,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-back"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -670,19 +670,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-from-bottom"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -695,19 +695,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-from-left"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -720,19 +720,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-from-right"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -745,19 +745,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-from-top"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -770,19 +770,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-to-bottom"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -795,19 +795,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-to-left"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -820,19 +820,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-to-right"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -845,19 +845,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:arrow-to-top"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -870,19 +870,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:at"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -895,19 +895,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:atom"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -926,19 +926,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:award"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -951,19 +951,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:badge"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -976,19 +976,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:badge-check"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1005,19 +1005,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:baguette"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1030,19 +1030,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:ball"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1059,19 +1059,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:band-aid"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1088,19 +1088,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:bar-chart"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1113,19 +1113,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:bar-chart-alt"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1138,19 +1138,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:bar-chart-alt-2"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1163,19 +1163,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:bar-chart-square"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1192,19 +1192,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:barcode"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1221,19 +1221,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:barcode-reader"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1250,19 +1250,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:baseball"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"
@@ -1279,19 +1279,19 @@ function Icons(props) {
               </div>
             </div>
           </div>
-          <div class="MuiGrid-root MuiGrid-item css-1wxaqej">
+          <div className="MuiGrid-root MuiGrid-item css-1wxaqej">
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation6 MuiCard-root css-1848kuw"
               aria-label="bx:basket"
             >
-              <div class="MuiCardContent-root css-lmzh3f">
+              <div className="MuiCardContent-root css-lmzh3f">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   //   xmlns:xlink="http://www.w3.org/1999/xlink"
                   aria-hidden="true"
                   role="img"
-                  font-size="22px"
-                  class="iconify iconify--bx"
+                  fontSize="22px"
+                  className="iconify iconify--bx"
                   width="1em"
                   height="1em"
                   viewBox="0 0 24 24"

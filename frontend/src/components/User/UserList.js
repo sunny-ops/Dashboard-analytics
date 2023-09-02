@@ -104,7 +104,7 @@ function UserList(props) {
   const [rows, setRows] = useState([]);
   //   console.log(props.role, props.plan, props.status);
   const { role, plan, status } = props;
-  console.log(role, plan, status);
+  // console.log(role, plan, status);
   useEffect(() => {
     axios
       .get(
