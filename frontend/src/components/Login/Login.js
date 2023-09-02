@@ -31,7 +31,7 @@ function Login(props) {
           alert("Login Successfully");
           //   navigate("/dashboards/analytics");
           const username = res.data.username;
-          navigate(`/dashboards/analytics?username=${username}`);
+          navigate(`/analytics?username=${username}`);
         } else if (res.data.code === 2) {
           alert("Email or password not correct");
           console.log(res.data.code);
