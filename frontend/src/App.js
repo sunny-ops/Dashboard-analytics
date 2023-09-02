@@ -250,7 +250,7 @@ export default function App() {
                 className="pb-2"
               >
                 <NavLink
-                  to={`dashboards/analytics`}
+                  to={`/analytics`}
                   className={({ isActive }) => {
                     return isActive
                       ? "active round-border nav-link"

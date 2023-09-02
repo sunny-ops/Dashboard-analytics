@@ -4,7 +4,7 @@ import Signup from "../components/Login/Signup";
 import App from "../App";
 
 export const myroutes = [
-  { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
+  { path: "/", element: <Navigate to="/analytics"></Navigate> },
   {
     path: "/signup",
     element: <Signup />,

@@ -24,8 +24,8 @@ import Signup from "../components/Login/Signup";
 import App from "../App";
 
 const routes = [
-  { path: "/", element: <Navigate to="/dashboards/analytics"></Navigate> },
-  { path: "dashboards/analytics", element: <Analytics value="10" /> },
+  { path: "/", element: <Navigate to="/analytics"></Navigate> },
+  { path: "/analytics", element: <Analytics value="10" /> },
   { path: "dashboards/crm", element: <CRM /> },
   { path: "dashboards/ecommerce", element: <Ecommerce /> },
   {
